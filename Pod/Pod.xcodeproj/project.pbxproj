@@ -27,7 +27,6 @@
 		14C136521AB784B200B7B07A /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		14C136541AB784B200B7B07A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		14C136551AB784B200B7B07A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		14C1365C1AB784BC00B7B07A /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		28EF67330C4F911B89F43D47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A29D055417288C967EE80744 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F924421B284C5400BAF081 /* CampaignController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignController.swift; sourceTree = "<group>"; };
@@ -110,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				D5F924441B284D3900BAF081 /* Models */,
-				14C1365C1AB784BC00B7B07A /* .gitkeep */,
 				D5F924421B284C5400BAF081 /* CampaignController.swift */,
 			);
 			name = Source;
