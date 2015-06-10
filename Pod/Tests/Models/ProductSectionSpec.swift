@@ -19,6 +19,10 @@ class ProductSectionSpec: QuickSpec {
       }
 
       describe("#init") {
+        it("is a subclass of Post") {
+          expect(productSection).to(beAKindOf(Post.self))
+        }
+
         it("sets default values") {
           expect(productSection.productCards.count).to(equal(0))
           expect(productSection.image).to(beNil())

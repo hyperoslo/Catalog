@@ -33,6 +33,8 @@ class CampaignSpec: QuickSpec {
 
         it("sets default values") {
           expect(campaign.id).to(beNil())
+          expect(campaign.contentSections.count).to(equal(0))
+          expect(campaign.productSections.count).to(equal(0))
         }
 
         context("with required parameters") {
