@@ -15,6 +15,7 @@
 		D5F9244D1B28671200BAF081 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9244C1B28671200BAF081 /* Product.swift */; };
 		D5F9244F1B28714D00BAF081 /* ProductSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9244E1B28714D00BAF081 /* ProductSpec.swift */; };
 		D5F924511B28777F00BAF081 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924501B28777F00BAF081 /* ProductCard.swift */; };
+		D5F924531B287A8300BAF081 /* ProductSectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924521B287A8300BAF081 /* ProductSectionSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D5F9244C1B28671200BAF081 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D5F9244E1B28714D00BAF081 /* ProductSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSpec.swift; sourceTree = "<group>"; };
 		D5F924501B28777F00BAF081 /* ProductCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		D5F924521B287A8300BAF081 /* ProductSectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSectionSpec.swift; sourceTree = "<group>"; };
 		EE6995D8BC8E90B338BAD99F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +117,8 @@
 			children = (
 				D5F924451B284D8C00BAF081 /* Campaign.swift */,
 				D5F9244A1B28635900BAF081 /* ProductSection.swift */,
-				D5F9244C1B28671200BAF081 /* Product.swift */,
 				D5F924501B28777F00BAF081 /* ProductCard.swift */,
+				D5F9244C1B28671200BAF081 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +128,7 @@
 			children = (
 				D5F924481B28563000BAF081 /* CampaignSpec.swift */,
 				D5F9244E1B28714D00BAF081 /* ProductSpec.swift */,
+				D5F924521B287A8300BAF081 /* ProductSectionSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */,
 				D5F9244D1B28671200BAF081 /* Product.swift in Sources */,
 				D5F924431B284C5400BAF081 /* CampaignController.swift in Sources */,
+				D5F924531B287A8300BAF081 /* ProductSectionSpec.swift in Sources */,
 				D5F9244F1B28714D00BAF081 /* ProductSpec.swift in Sources */,
 				D5F9244B1B28635900BAF081 /* ProductSection.swift in Sources */,
 				D5F924511B28777F00BAF081 /* ProductCard.swift in Sources */,
