@@ -6,7 +6,6 @@ public class Campaign: NSObject {
     case New, Done
   }
 
-  public var id: Int?
   public var title: String
   public var startDate: NSDate
   public var endDate: NSDate
