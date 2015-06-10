@@ -1,7 +1,10 @@
 platform :ios, '8.0'
+
 use_frameworks!
 
-# When using more than one target in your project
-# link_with 'Demo', 'Tests' 
+pod 'Quick', '0.3.1'
+pod 'Nimble', '1.0.0-rc.1'
 
-# pod 'Sample'
+pod 'Wall', git: 'https://github.com/hyperoslo/Wall'
+pod 'TimeAgo', git: 'https://github.com/hyperoslo/TimeAgo'
+pod 'Faker', git: 'https://github.com/vadymmarkov/Faker'
