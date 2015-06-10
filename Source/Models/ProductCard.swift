@@ -1,5 +1,4 @@
 import Foundation
-import Wall
 
 public class ProductCard: NSObject {
 

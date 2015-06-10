@@ -1,4 +1,3 @@
-import Foundation
 import Wall
 
 public class ProductSection: Post {
