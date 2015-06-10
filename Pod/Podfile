@@ -2,8 +2,9 @@ platform :ios, '8.0'
 
 use_frameworks!
 
-pod 'AsyncDisplayKit', '1.2'
-pod 'HanekeSwift', '0.9.1'
 pod 'Quick', '0.3.1'
 pod 'Nimble', '1.0.0-rc.1'
+
+pod 'Wall', git: 'https://github.com/hyperoslo/Wall'
+pod 'TimeAgo', git: 'https://github.com/hyperoslo/TimeAgo'
 pod 'Faker', git: 'https://github.com/vadymmarkov/Faker'
