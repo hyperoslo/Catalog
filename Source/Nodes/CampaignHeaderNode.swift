@@ -3,27 +3,38 @@ import AsyncDisplayKit
 
 public class CampaignHeaderNode: ASCellNode {
 
+  let config: Config
   let width: CGFloat
 
   var titleNode: ASTextNode
   var dateNode: ASTextNode
 
+  var headerConfig: Config.Campaign.Header {
+    return config.campaign.header
+  }
+
   // MARK: - Initialization
 
-  public init(campaign: Campaign, width: CGFloat) {
+  public init(config: Config, campaign: Campaign, width: CGFloat) {
+    self.config = config
     self.width = width
 
     titleNode = ASTextNode()
-    titleNode.attributedString = NSAttributedString(
-      string: campaign.title,
-      attributes: nil)
-
     dateNode = ASTextNode()
-    dateNode.attributedString = NSAttributedString(
-      string: "",
-      attributes: nil)
 
     super.init()
+
+    titleNode.attributedString = NSAttributedString(
+      string: campaign.title,
+      attributes: headerConfig.title.textAttributes)
+
+    let dateFormatter = config.campaign.dateFormatter
+    let startDateString = dateFormatter.stringFromDate(campaign.startDate)
+    let endDateString = dateFormatter.stringFromDate(campaign.endDate)
+
+    dateNode.attributedString = NSAttributedString(
+      string: "\(startDateString) - \(endDateString)",
+      attributes: headerConfig.date.textAttributes)
 
     addSubnode(titleNode)
     addSubnode(dateNode)
@@ -32,7 +43,7 @@ public class CampaignHeaderNode: ASCellNode {
   // MARK: - Layout
 
   override public func calculateSizeThatFits(constrainedSize: CGSize) -> CGSize {
-    var height: CGFloat = 0
+    var height: CGFloat = headerConfig.padding * 3
 
     let titleSize = titleNode.measure(CGSize(
       width: width,
@@ -48,13 +59,14 @@ public class CampaignHeaderNode: ASCellNode {
   }
 
   override public func layout() {
-    var y: CGFloat = 0
+    let padding = headerConfig.padding
+    var y: CGFloat = padding
 
     let titleSize = titleNode.calculatedSize
     titleNode.frame = CGRect(
       origin: CGPoint(x: 0, y: y),
       size: titleSize)
-    y += titleSize.height
+    y += titleSize.height + padding
 
     let dateSize = dateNode.calculatedSize
     dateNode.frame = CGRect(
