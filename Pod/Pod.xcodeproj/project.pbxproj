@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C235EDD756BC67A8F49C7009 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29D055417288C967EE80744 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D5353B491B29837200576E0B /* CampaignHeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B481B29837200576E0B /* CampaignHeaderNode.swift */; };
+		D5353B4B1B2986B700576E0B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4A1B2986B700576E0B /* Config.swift */; };
 		D5F924431B284C5400BAF081 /* CampaignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924421B284C5400BAF081 /* CampaignController.swift */; };
 		D5F924461B284D8C00BAF081 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924451B284D8C00BAF081 /* Campaign.swift */; };
 		D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924481B28563000BAF081 /* CampaignSpec.swift */; };
@@ -31,6 +32,7 @@
 		28EF67330C4F911B89F43D47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A29D055417288C967EE80744 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5353B481B29837200576E0B /* CampaignHeaderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignHeaderNode.swift; sourceTree = "<group>"; };
+		D5353B4A1B2986B700576E0B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D5F924421B284C5400BAF081 /* CampaignController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignController.swift; sourceTree = "<group>"; };
 		D5F924451B284D8C00BAF081 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		D5F924481B28563000BAF081 /* CampaignSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignSpec.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				D5353B471B29832200576E0B /* Nodes */,
 				D5F924441B284D3900BAF081 /* Models */,
 				D5F924421B284C5400BAF081 /* CampaignController.swift */,
+				D5353B4A1B2986B700576E0B /* Config.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -288,6 +291,7 @@
 				D5F9244D1B28671200BAF081 /* Product.swift in Sources */,
 				D5F924431B284C5400BAF081 /* CampaignController.swift in Sources */,
 				D5F924531B287A8300BAF081 /* ProductSectionSpec.swift in Sources */,
+				D5353B4B1B2986B700576E0B /* Config.swift in Sources */,
 				D5F9244F1B28714D00BAF081 /* ProductSpec.swift in Sources */,
 				D5F9244B1B28635900BAF081 /* ProductSection.swift in Sources */,
 				D5F924551B287C4A00BAF081 /* ProductCardSpec.swift in Sources */,
