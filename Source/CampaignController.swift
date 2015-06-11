@@ -17,4 +17,10 @@ public class CampaignController: WallController {
     Config.Wall.Post.Footer.enabled = false
     Config.Wall.Post.ActionBar.enabled = false
   }
+
+  func generatePosts() -> [Post] {
+    var posts = [Post]()
+
+    return posts
+  }
 }

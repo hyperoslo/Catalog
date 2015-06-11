@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C235EDD756BC67A8F49C7009 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29D055417288C967EE80744 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D5353B491B29837200576E0B /* CampaignHeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B481B29837200576E0B /* CampaignHeaderNode.swift */; };
 		D5F924431B284C5400BAF081 /* CampaignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924421B284C5400BAF081 /* CampaignController.swift */; };
 		D5F924461B284D8C00BAF081 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924451B284D8C00BAF081 /* Campaign.swift */; };
 		D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924481B28563000BAF081 /* CampaignSpec.swift */; };
@@ -29,6 +30,7 @@
 		14C136551AB784B200B7B07A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		28EF67330C4F911B89F43D47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A29D055417288C967EE80744 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5353B481B29837200576E0B /* CampaignHeaderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignHeaderNode.swift; sourceTree = "<group>"; };
 		D5F924421B284C5400BAF081 /* CampaignController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignController.swift; sourceTree = "<group>"; };
 		D5F924451B284D8C00BAF081 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		D5F924481B28563000BAF081 /* CampaignSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignSpec.swift; sourceTree = "<group>"; };
@@ -108,11 +110,20 @@
 		14C1365B1AB784BC00B7B07A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D5353B471B29832200576E0B /* Nodes */,
 				D5F924441B284D3900BAF081 /* Models */,
 				D5F924421B284C5400BAF081 /* CampaignController.swift */,
 			);
 			name = Source;
 			path = ../Source;
+			sourceTree = "<group>";
+		};
+		D5353B471B29832200576E0B /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				D5353B481B29837200576E0B /* CampaignHeaderNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		D5F924441B284D3900BAF081 /* Models */ = {
@@ -280,6 +291,7 @@
 				D5F9244F1B28714D00BAF081 /* ProductSpec.swift in Sources */,
 				D5F9244B1B28635900BAF081 /* ProductSection.swift in Sources */,
 				D5F924551B287C4A00BAF081 /* ProductCardSpec.swift in Sources */,
+				D5353B491B29837200576E0B /* CampaignHeaderNode.swift in Sources */,
 				D5F924571B287CC500BAF081 /* SpecHelper.swift in Sources */,
 				D5F924511B28777F00BAF081 /* ProductCard.swift in Sources */,
 			);
