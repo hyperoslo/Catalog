@@ -1,15 +1,22 @@
 import Foundation
 import UIKit
+import Wall
 
-public struct Config {
+public class Config: Wall.Config {
 
-  private static var dateFormatter: NSDateFormatter = {
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "MM-dd"
-    return dateFormatter
-    }()
+  public var campaign = Campaign()
 
+  public override init() {
+    super.init()
+  }
+  
   public struct Campaign {
+    private static var dateFormatter: NSDateFormatter = {
+      let dateFormatter = NSDateFormatter()
+      dateFormatter.dateFormat = "dd.MM.yy"
+      return dateFormatter
+      }()
+
     public var padding: CGFloat = 0
 
     public var stringFromPostDate: (date: NSDate) -> String = {
@@ -35,6 +42,18 @@ public struct Config {
     }
 
     public struct ContentSection {
+      public var horizontalPadding: CGFloat = 0
+      public var verticalPadding: CGFloat = 10
+
+      public struct Title {
+        public var textAttributes = [
+          NSFontAttributeName: UIFont.boldSystemFontOfSize(14),
+          NSForegroundColorAttributeName: UIColor.blackColor()
+        ]
+      }
+    }
+
+    public struct ProductSection {
       public var horizontalPadding: CGFloat = 0
       public var verticalPadding: CGFloat = 10
 

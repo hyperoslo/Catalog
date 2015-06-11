@@ -7,15 +7,16 @@ public class CampaignController: WallController {
 
   convenience init(campaign: Campaign) {
     self.init()
+    self.config = Config()
     self.campaign = campaign
   }
 
   public override func viewDidLoad() {
     super.viewDidLoad()
 
-    Config.Wall.Post.Header.enabled = false
-    Config.Wall.Post.Footer.enabled = false
-    Config.Wall.Post.ActionBar.enabled = false
+    config.wall.post.header.enabled = false
+    config.wall.post.footer.enabled = false
+    config.wall.post.actionBar.enabled = false
   }
 
   func generatePosts() -> [Post] {
