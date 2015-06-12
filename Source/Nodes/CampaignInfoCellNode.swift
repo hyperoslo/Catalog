@@ -13,9 +13,9 @@ public class CampaignInfoCellNode: ASCellNode {
 
   // MARK: - Initialization
 
-  public init(post: Post, width: CGFloat, _ delegate: CampaignCellNodeDelegate? = nil) {
+  public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate
+    self.delegate = delegate as? CampaignCellNodeDelegate
     self.config = self.delegate?.campaignConfig
 
     super.init()

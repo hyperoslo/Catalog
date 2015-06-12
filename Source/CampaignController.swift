@@ -38,6 +38,8 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
 
   public override func viewDidLoad() {
     super.viewDidLoad()
+    dataSource = CampaignDataSource(delegate: self)
+    collectionView.asyncDataSource = dataSource
 
     posts = generatePosts()
 
