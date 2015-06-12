@@ -20,10 +20,10 @@ public class Config: Wall.Config {
     public var padding: CGFloat = 0
 
     public var info = Info()
+    public var readySection = ReadySection()
 
     public struct Info {
       public var verticalPadding: CGFloat = 10
-
       public var title = Title()
       public var text = Text()
 
@@ -42,6 +42,23 @@ public class Config: Wall.Config {
       public struct Text {
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(10),
+          NSForegroundColorAttributeName: UIColor.grayColor(),
+          NSParagraphStyleAttributeName: {
+            var style = NSMutableParagraphStyle()
+            style.alignment = .Center
+            return style
+            }()
+        ]
+      }
+    }
+
+    public struct ReadySection {
+      public var verticalPadding: CGFloat = 10
+      public var text = Text()
+
+      public struct Text {
+        public var textAttributes = [
+          NSFontAttributeName: UIFont.systemFontOfSize(14),
           NSForegroundColorAttributeName: UIColor.grayColor(),
           NSParagraphStyleAttributeName: {
             var style = NSMutableParagraphStyle()

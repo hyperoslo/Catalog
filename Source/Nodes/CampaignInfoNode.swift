@@ -2,7 +2,7 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignInfoNode: ASControlNode {
+public class CampaignInfoNode: ASDisplayNode {
 
   let config: Config
   let width: CGFloat
@@ -51,7 +51,7 @@ public class CampaignInfoNode: ASControlNode {
       height += size.height + infoConfig.verticalPadding
     }
 
-    if let textNode = titleNode {
+    if let textNode = textNode {
       let size = textNode.measure(CGSize(
         width: width,
         height: CGFloat(FLT_MAX)))
@@ -73,7 +73,7 @@ public class CampaignInfoNode: ASControlNode {
         y += size.height + padding
     }
 
-    if let textNode = titleNode {
+    if let textNode = textNode {
       let size = textNode.calculatedSize
       textNode.frame = CGRect(
         origin: CGPoint(x: 0, y: y),

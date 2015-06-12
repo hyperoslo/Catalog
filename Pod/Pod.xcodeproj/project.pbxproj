@@ -12,6 +12,7 @@
 		D5353B4B1B2986B700576E0B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4A1B2986B700576E0B /* Config.swift */; };
 		D5353B4D1B298C8D00576E0B /* CampaignDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4C1B298C8D00576E0B /* CampaignDataSource.swift */; };
 		D5353B4F1B298D4B00576E0B /* CampaignCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4E1B298D4B00576E0B /* CampaignCellNode.swift */; };
+		D5A5B1161B2A653000F73D3D /* CampaignReadyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B1151B2A653000F73D3D /* CampaignReadyNode.swift */; };
 		D5F924431B284C5400BAF081 /* CampaignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924421B284C5400BAF081 /* CampaignController.swift */; };
 		D5F924461B284D8C00BAF081 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924451B284D8C00BAF081 /* Campaign.swift */; };
 		D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924481B28563000BAF081 /* CampaignSpec.swift */; };
@@ -37,6 +38,7 @@
 		D5353B4A1B2986B700576E0B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D5353B4C1B298C8D00576E0B /* CampaignDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignDataSource.swift; sourceTree = "<group>"; };
 		D5353B4E1B298D4B00576E0B /* CampaignCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignCellNode.swift; sourceTree = "<group>"; };
+		D5A5B1151B2A653000F73D3D /* CampaignReadyNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignReadyNode.swift; sourceTree = "<group>"; };
 		D5F924421B284C5400BAF081 /* CampaignController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignController.swift; sourceTree = "<group>"; };
 		D5F924451B284D8C00BAF081 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		D5F924481B28563000BAF081 /* CampaignSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignSpec.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D5353B481B29837200576E0B /* CampaignInfoNode.swift */,
+				D5A5B1151B2A653000F73D3D /* CampaignReadyNode.swift */,
 				D5353B4E1B298D4B00576E0B /* CampaignCellNode.swift */,
 			);
 			path = Nodes;
@@ -303,6 +306,7 @@
 				D5F9244B1B28635900BAF081 /* ProductSection.swift in Sources */,
 				D5353B4F1B298D4B00576E0B /* CampaignCellNode.swift in Sources */,
 				D5F924551B287C4A00BAF081 /* ProductCardSpec.swift in Sources */,
+				D5A5B1161B2A653000F73D3D /* CampaignReadyNode.swift in Sources */,
 				D5353B491B29837200576E0B /* CampaignInfoNode.swift in Sources */,
 				D5F924571B287CC500BAF081 /* SpecHelper.swift in Sources */,
 				D5F924511B28777F00BAF081 /* ProductCard.swift in Sources */,
