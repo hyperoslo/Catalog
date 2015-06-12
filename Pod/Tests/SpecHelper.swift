@@ -3,6 +3,21 @@ import Wall
 
 struct SpecHelper {
 
+  static var campaign: Campaign {
+    let faker = Faker()
+
+    let title = faker.lorem.word()
+    let publishDate = NSDate()
+    let startDate = NSDate()
+    let endDate = NSDate()
+    let status = Campaign.Status.Done
+
+    let campaign = Campaign(title: title, publishDate: publishDate,
+        startDate: startDate, endDate: endDate, status: status)
+
+    return campaign
+  }
+
   static var product: Product {
     let faker = Faker()
 
