@@ -11,7 +11,7 @@ public class Campaign: NSObject {
   public var endDate: NSDate
   public var status: Status
   public var contentSections = [Post]()
-  public var productSections = [ProductSection]()
+  public var productSections: [Post] = [ProductSection]()
 
   public init(title: String, startDate: NSDate, endDate: NSDate,
     status: Status = Status.New, contentSections: [Post] = [],
