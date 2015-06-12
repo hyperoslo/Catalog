@@ -20,8 +20,6 @@ public class Config: Wall.Config {
     public var padding: CGFloat = 0
 
     public var header = Header()
-    public var contentSection = ContentSection()
-    public var productSection = ProductSection()
 
     public struct Header {
       public var padding: CGFloat = 5
@@ -50,32 +48,6 @@ public class Config: Wall.Config {
             style.alignment = .Center
             return style
             }()
-        ]
-      }
-    }
-
-    public struct ContentSection {
-      public var horizontalPadding: CGFloat = 0
-      public var verticalPadding: CGFloat = 10
-      public var title = Title()
-
-      public struct Title {
-        public var textAttributes = [
-          NSFontAttributeName: UIFont.boldSystemFontOfSize(14),
-          NSForegroundColorAttributeName: UIColor.blackColor()
-        ]
-      }
-    }
-
-    public struct ProductSection {
-      public var horizontalPadding: CGFloat = 0
-      public var verticalPadding: CGFloat = 10
-      public var title = Title()
-
-      public struct Title {
-        public var textAttributes = [
-          NSFontAttributeName: UIFont.boldSystemFontOfSize(14),
-          NSForegroundColorAttributeName: UIColor.blackColor()
         ]
       }
     }

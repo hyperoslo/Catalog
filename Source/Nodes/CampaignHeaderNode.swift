@@ -1,7 +1,7 @@
 import UIKit
 import AsyncDisplayKit
 
-public class CampaignHeaderNode: ASCellNode {
+public class CampaignHeaderNode: ASControlNode {
 
   let config: Config
   let width: CGFloat
