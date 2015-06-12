@@ -5,6 +5,10 @@ public class CampaignController: WallController {
 
   public var campaign: Campaign?
 
+  var campaignConfig: Config.Campaign {
+    return (config as! Config).campaign
+  }
+
   convenience init(campaign: Campaign) {
     self.init()
     self.config = Config()
@@ -15,7 +19,7 @@ public class CampaignController: WallController {
     super.viewDidLoad()
 
     posts = generatePosts()
-    
+
     config.wall.post.header.enabled = false
     config.wall.post.footer.enabled = false
     config.wall.post.actionBar.enabled = false
@@ -26,6 +30,11 @@ public class CampaignController: WallController {
     var posts = [Post]()
 
     if let campaign = campaign {
+      let dateFormatter = campaignConfig.dateFormatter
+      let startDateString = dateFormatter.stringFromDate(campaign.startDate)
+      let endDateString = dateFormatter.stringFromDate(campaign.endDate)
+      "\(startDateString) - \(endDateString)"
+
       posts += campaign.contentSections
       posts += campaign.productSections
     }

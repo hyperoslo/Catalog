@@ -19,13 +19,13 @@ public class Config: Wall.Config {
 
     public var padding: CGFloat = 0
 
-    public var header = Header()
+    public var info = Info()
 
-    public struct Header {
-      public var padding: CGFloat = 5
+    public struct Info {
+      public var verticalPadding: CGFloat = 10
 
       public var title = Title()
-      public var date = Date()
+      public var text = Text()
 
       public struct Title {
         public var textAttributes = [
@@ -39,7 +39,7 @@ public class Config: Wall.Config {
         ]
       }
 
-      public struct Date {
+      public struct Text {
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(10),
           NSForegroundColorAttributeName: UIColor.grayColor(),
