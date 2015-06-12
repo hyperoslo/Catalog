@@ -11,6 +11,7 @@ class CampaignInfoCellNodeSpec: QuickSpec {
 
       let controller = CampaignController()
       let config = controller.campaignConfig.campaign
+      
       let campaign = SpecHelper.campaign
       let post = Post(
         text: faker.lorem.sentences(amount: 2),

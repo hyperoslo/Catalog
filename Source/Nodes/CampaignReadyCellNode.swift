@@ -2,13 +2,12 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignInfoCellNode: ASCellNode {
+public class CampaignReadyCellNode: ASCellNode {
 
   public let width: CGFloat
   public var delegate: CampaignCellNodeDelegate?
-  public var config: Config?
+  public let config: Config?
 
-  var titleNode: ASTextNode?
   var textNode: ASTextNode?
 
   // MARK: - Initialization
@@ -21,21 +20,13 @@ public class CampaignInfoCellNode: ASCellNode {
     super.init()
 
     if let config = config {
-      let infoConfig = config.campaign.info
-
-      if let title = post.title {
-        titleNode = ASTextNode()
-        titleNode!.attributedString = NSAttributedString(
-          string: title,
-          attributes: infoConfig.title.textAttributes)
-        addSubnode(titleNode)
-      }
+      let sectionConfig = config.campaign.readySection
 
       if let text = post.text {
         textNode = ASTextNode()
         textNode!.attributedString = NSAttributedString(
           string: text,
-          attributes: infoConfig.text.textAttributes)
+          attributes: sectionConfig.text.textAttributes)
         addSubnode(textNode)
       }
     }
@@ -47,21 +38,15 @@ public class CampaignInfoCellNode: ASCellNode {
     var height: CGFloat = 0
 
     if let config = config {
-      let infoConfig = config.campaign.info
-      height = infoConfig.verticalPadding
+      let sectionConfig = config.campaign.readySection
 
-      if let titleNode = titleNode {
-        let size = titleNode.measure(CGSize(
-          width: width,
-          height: CGFloat(FLT_MAX)))
-        height += size.height + infoConfig.verticalPadding
-      }
+      height = sectionConfig.verticalPadding
 
       if let textNode = textNode {
         let size = textNode.measure(CGSize(
           width: width,
           height: CGFloat(FLT_MAX)))
-        height += size.height + infoConfig.verticalPadding
+        height += size.height + sectionConfig.verticalPadding
       }
     }
 
@@ -70,18 +55,10 @@ public class CampaignInfoCellNode: ASCellNode {
 
   override public func layout() {
     if let config = config {
-      let infoConfig = config.campaign.info
+      let sectionConfig = config.campaign.readySection
 
-      let padding = infoConfig.verticalPadding
+      let padding = sectionConfig.verticalPadding
       var y: CGFloat = padding
-
-      if let titleNode = titleNode {
-        let size = titleNode.calculatedSize
-        titleNode.frame = CGRect(
-          origin: CGPoint(x: 0, y: y),
-          size: size)
-        y += size.height + padding
-      }
 
       if let textNode = textNode {
         let size = textNode.calculatedSize

@@ -3,13 +3,15 @@ import Nimble
 import Faker
 import Wall
 
-class CampaignReadyNodeSpec: QuickSpec {
+class CampaignReadyCellNodeSpec: QuickSpec {
 
   override func spec() {
-    describe("CampaignReadyNode") {
+    describe("CampaignReadyCellNode") {
       let faker = Faker()
 
-      let config = Config()
+      let controller = CampaignController()
+      let config = controller.campaignConfig.campaign
+
       let campaign = SpecHelper.campaign
       let post = Post(
         text: faker.lorem.sentences(amount: 2),
@@ -18,12 +20,12 @@ class CampaignReadyNodeSpec: QuickSpec {
 
       let text = NSAttributedString(
         string: post.text!,
-        attributes: config.campaign.readySection.text.textAttributes)
+        attributes: config.readySection.text.textAttributes)
 
-      var node: CampaignReadyNode!
+      var node: CampaignReadyCellNode!
 
       beforeEach {
-        node = CampaignReadyNode(config: config, post: post, width: width)
+        node = CampaignReadyCellNode(post: post, width: width, controller)
       }
 
       describe("#init") {
@@ -41,7 +43,7 @@ class CampaignReadyNodeSpec: QuickSpec {
         context("with no text") {
           beforeEach {
             post.text = nil
-            node = CampaignReadyNode(config: config, post: post, width: width)
+            node = CampaignReadyCellNode(post: post, width: width, controller)
           }
 
           it("does not add a text node") {
