@@ -10,7 +10,7 @@ class CampaignSpec: QuickSpec {
       let publishDate = NSDate()
       let startDate = NSDate()
       let endDate = NSDate()
-      let status = Campaign.Status.Done
+      let status = Campaign.Status.Completed
 
       var campaign: Campaign!
 
@@ -48,7 +48,7 @@ class CampaignSpec: QuickSpec {
           }
 
           it("sets default values") {
-            expect(campaign.status).to(equal(Campaign.Status.New))
+            expect(campaign.status).to(equal(Campaign.Status.Open))
           }
         }
 

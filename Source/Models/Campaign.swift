@@ -3,7 +3,7 @@ import Wall
 public class Campaign: NSObject {
 
   public enum Status {
-    case New, Done
+    case Open, Completed, Expired
   }
 
   public var title: String
@@ -15,7 +15,7 @@ public class Campaign: NSObject {
   public var productSections: [Post] = [ProductSection]()
 
   public init(title: String, publishDate: NSDate, startDate: NSDate,
-    endDate: NSDate, status: Status = Status.New,
+    endDate: NSDate, status: Status = Status.Open,
     contentSections: [Post] = [],
     productSections: [ProductSection] = []) {
       self.title = title

@@ -10,7 +10,7 @@ struct SpecHelper {
     let publishDate = NSDate()
     let startDate = NSDate()
     let endDate = NSDate()
-    let status = Campaign.Status.Done
+    let status = Campaign.Status.Open
 
     let campaign = Campaign(title: title, publishDate: publishDate,
         startDate: startDate, endDate: endDate, status: status)
