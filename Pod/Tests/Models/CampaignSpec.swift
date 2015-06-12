@@ -7,6 +7,7 @@ class CampaignSpec: QuickSpec {
   override func spec() {
     describe("Campaign") {
       let title = Faker().lorem.word()
+      let publishDate = NSDate()
       let startDate = NSDate()
       let endDate = NSDate()
       let status = Campaign.Status.Done
@@ -14,13 +15,17 @@ class CampaignSpec: QuickSpec {
       var campaign: Campaign!
 
       beforeEach {
-        campaign = Campaign(title: title, startDate: startDate,
-          endDate: endDate, status: status)
+        campaign = Campaign(title: title, publishDate: publishDate,
+          startDate: startDate, endDate: endDate, status: status)
       }
 
       describe("#init") {
         it("sets title") {
           expect(campaign.title).to(equal(title))
+        }
+
+        it("sets publish date") {
+          expect(campaign.publishDate).to(equal(publishDate))
         }
 
         it("sets start date") {
@@ -38,8 +43,8 @@ class CampaignSpec: QuickSpec {
 
         context("with required parameters") {
           beforeEach {
-            campaign = Campaign(title: title, startDate: startDate,
-              endDate: endDate)
+            campaign = Campaign(title: title, publishDate: publishDate,
+              startDate: startDate, endDate: endDate)
           }
 
           it("sets default values") {
