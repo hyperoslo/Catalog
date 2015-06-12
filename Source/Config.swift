@@ -57,6 +57,7 @@ public class Config: Wall.Config {
       public var text = Text()
 
       public struct Text {
+        public var infoText = NSLocalizedString("ReadyInfo", comment: "")
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(14),
           NSForegroundColorAttributeName: UIColor.grayColor(),
