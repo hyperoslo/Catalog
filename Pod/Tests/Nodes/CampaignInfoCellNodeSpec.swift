@@ -3,13 +3,14 @@ import Nimble
 import Faker
 import Wall
 
-class CampaignInfoNodeSpec: QuickSpec {
+class CampaignInfoCellNodeSpec: QuickSpec {
 
   override func spec() {
-    describe("CampaignInfoNode") {
+    describe("CampaignInfoCellNode") {
       let faker = Faker()
 
-      let config = Config()
+      let controller = CampaignController()
+      let config = controller.campaignConfig.campaign
       let campaign = SpecHelper.campaign
       let post = Post(
         text: faker.lorem.sentences(amount: 2),
@@ -19,15 +20,15 @@ class CampaignInfoNodeSpec: QuickSpec {
 
       let title = NSAttributedString(
         string: post.title!,
-        attributes: config.campaign.info.title.textAttributes)
+        attributes: config.info.title.textAttributes)
       let text = NSAttributedString(
         string: post.text!,
-        attributes: config.campaign.info.text.textAttributes)
+        attributes: config.info.text.textAttributes)
 
-      var node: CampaignInfoNode!
+      var node: CampaignInfoCellNode!
 
       beforeEach {
-        node = CampaignInfoNode(config: config, post: post, width: width)
+        node = CampaignInfoCellNode(post: post, width: width, controller)
       }
 
       describe("#init") {
@@ -52,7 +53,7 @@ class CampaignInfoNodeSpec: QuickSpec {
         context("with no title") {
           beforeEach {
             post.title = nil
-            node = CampaignInfoNode(config: config, post: post, width: width)
+            node = CampaignInfoCellNode(post: post, width: width, controller)
           }
 
           it("does not add a title node") {
@@ -63,7 +64,7 @@ class CampaignInfoNodeSpec: QuickSpec {
         context("with no text") {
           beforeEach {
             post.text = nil
-            node = CampaignInfoNode(config: config, post: post, width: width)
+            node = CampaignInfoCellNode(post: post, width: width, controller)
           }
 
           it("does not add a text node") {

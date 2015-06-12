@@ -1,14 +1,15 @@
 import UIKit
 import Wall
 
-public class CampaignController: WallController {
+public class CampaignController: WallController, CampaignCellNodeDelegate {
 
   public var campaign: Campaign?
+  public var campaignConfig = Config()
 
   public var infoPost: Post? {
     var post: Post?
     if let campaign = campaign {
-      let dateFormatter = campaignConfig.dateFormatter
+      let dateFormatter = campaignConfig.campaign.dateFormatter
       let startDateString = dateFormatter.stringFromDate(campaign.startDate)
       let endDateString = dateFormatter.stringFromDate(campaign.endDate)
       let infoText = "\(startDateString) - \(endDateString)"
@@ -23,19 +24,15 @@ public class CampaignController: WallController {
     var post: Post?
     if let campaign = campaign {
       post = Post(
-        text: campaignConfig.readySection.text.infoText,
+        text: campaignConfig.campaign.readySection.text.infoText,
         date: campaign.publishDate)
     }
     return post
   }
 
-  var campaignConfig: Config.Campaign {
-    return (config as! Config).campaign
-  }
-
   convenience init(campaign: Campaign) {
     self.init()
-    self.config = Config()
+    self.config = campaignConfig
     self.campaign = campaign
   }
 
