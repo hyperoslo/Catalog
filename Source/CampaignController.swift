@@ -30,18 +30,17 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
     return post
   }
 
-  convenience init(campaign: Campaign) {
+  public convenience init(campaign: Campaign) {
     self.init()
-    self.config = campaignConfig
     self.campaign = campaign
   }
 
   public override func viewDidLoad() {
     super.viewDidLoad()
+
+    config = campaignConfig
     dataSource = CampaignDataSource(delegate: self)
     collectionView.asyncDataSource = dataSource
-
-    posts = generatePosts()
 
     config.wall.post.header.enabled = false
     config.wall.post.footer.enabled = false
@@ -49,7 +48,7 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
     config.wall.post.title.enabled = true
   }
 
-  func generatePosts() -> [Post] {
+  public func reloadPosts() {
     var posts = [Post]()
 
     if let campaign = campaign {
@@ -63,6 +62,12 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
       }
     }
 
-    return posts
+    let delayTime = dispatch_time(
+      DISPATCH_TIME_NOW,
+      Int64(0.1 * Double(NSEC_PER_SEC)))
+
+    dispatch_after(delayTime, dispatch_get_main_queue()) {
+      self.posts = posts
+    }
   }
 }
