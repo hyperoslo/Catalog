@@ -25,7 +25,6 @@ class ProductSectionSpec: QuickSpec {
 
         it("sets default values") {
           expect(productSection.productCards.count).to(equal(0))
-          expect(productSection.image).to(beNil())
         }
       }
     }
