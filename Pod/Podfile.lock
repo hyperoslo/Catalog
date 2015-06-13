@@ -36,7 +36,7 @@ CHECKOUT OPTIONS:
     :commit: e80dfdfd2b80663c26565d41d1ec5739a944693d
     :git: https://github.com/hyperoslo/TimeAgo
   Wall:
-    :commit: 6e022e7b1e36bd397579154695becf2c62daaf91
+    :commit: d8e98d91a6857842ca8e565a5602432346b055aa
     :git: https://github.com/hyperoslo/Wall
 
 SPEC CHECKSUMS:
