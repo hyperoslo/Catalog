@@ -30,7 +30,7 @@ CHECKOUT OPTIONS:
     :commit: b24d4ed16d1c47976e76d64d450af60c468a9544
     :git: https://github.com/vadymmarkov/Faker
   Wall:
-    :commit: c6b4b891bc70dd6a6d8c5a5d8c855fb64a20c3e6
+    :commit: 6cc49d766ec94b31f04050d77211c507d08dd437
     :git: https://github.com/hyperoslo/Wall
 
 SPEC CHECKSUMS:

@@ -46,6 +46,8 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
     config.wall.post.footer.enabled = false
     config.wall.post.actionBar.enabled = false
     config.wall.post.title.enabled = true
+    config.wall.post.title.capitalized = true
+    config.wall.post.attachments.gridType = .SingleFullWidth
   }
 
   public func reloadPosts() {
