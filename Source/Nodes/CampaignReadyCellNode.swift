@@ -63,8 +63,8 @@ public class CampaignReadyCellNode: ASCellNode {
       if let textNode = textNode {
         let size = textNode.calculatedSize
         textNode.frame = CGRect(
-          origin: CGPoint(x: 0, y: y),
-          size: size)
+          x: 0, y: y,
+          width: width, height: size.height)
       }
     }
   }

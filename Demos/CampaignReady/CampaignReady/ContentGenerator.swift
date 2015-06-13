@@ -7,7 +7,7 @@ struct ContentGenerator {
   let faker = Faker()
 
   func campaign() -> Campaign {
-    let title = faker.lorem.word()
+    let title = faker.commerce.productName()
     let publishDate = NSDate()
     let startDate = NSDate()
     let endDate = NSDate()
@@ -20,9 +20,9 @@ struct ContentGenerator {
       endDate: endDate,
       status: status)
 
-    var index = 0
+    var index = 1
     let contentSectionCount = 2
-    let productSectionCount = 2
+    let productSectionCount = 1
 
     var contentSections = [Post]()
     var productSections = [ProductSection]()
@@ -44,7 +44,7 @@ struct ContentGenerator {
   }
 
   func contentSection(index: Int) -> Post {
-    let title = faker.lorem.word()
+    let title = faker.commerce.productName()
     let publishDate = NSDate()
     let attachments = images(index)
 
@@ -58,7 +58,7 @@ struct ContentGenerator {
   }
 
   func productSection(inout index: Int) -> ProductSection {
-    let title = faker.lorem.word()
+    let title = faker.commerce.productName()
     let publishDate = NSDate()
     let attachments = images(index)
 
@@ -98,7 +98,7 @@ struct ContentGenerator {
   }
 
   func product(index: Int) -> Product {
-    let title = faker.lorem.word()
+    let title = faker.commerce.productName()
     let attachments = images(index)
     let serialNumber = faker.commerce.productName()
     let text = faker.lorem.sentences(amount: 4)
@@ -121,10 +121,8 @@ struct ContentGenerator {
     var images = [Attachment]()
     var count = 1
 
-    if index % 4 == 0 {
+    if index % 2 == 0 {
       count = 4
-    } else if index % 3 == 0 {
-      count = 2
     }
 
     for x in 0..<count {

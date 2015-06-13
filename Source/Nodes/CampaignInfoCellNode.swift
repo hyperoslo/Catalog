@@ -78,16 +78,16 @@ public class CampaignInfoCellNode: ASCellNode {
       if let titleNode = titleNode {
         let size = titleNode.calculatedSize
         titleNode.frame = CGRect(
-          origin: CGPoint(x: 0, y: y),
-          size: size)
+          x: 0, y: y,
+          width: width, height: size.height)
         y += size.height + padding
       }
 
       if let textNode = textNode {
         let size = textNode.calculatedSize
         textNode.frame = CGRect(
-          origin: CGPoint(x: 0, y: y),
-          size: size)
+          x: 0, y: y,
+          width: width, height: size.height)
       }
     }
   }
