@@ -53,6 +53,7 @@ public class Config: Wall.Config {
     }
 
     public struct ReadySection {
+      public var horizontalPadding: CGFloat = 40
       public var verticalPadding: CGFloat = 10
       public var text = Text()
       public var divider = Divider()
@@ -71,6 +72,7 @@ public class Config: Wall.Config {
       }
 
       public struct Divider {
+        public var horizontalPadding: CGFloat = 10
         public var enabled = true
         public var height: CGFloat = 1
         public var backgroundColor = UIColor.lightGrayColor()

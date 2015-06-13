@@ -13,8 +13,8 @@ public class CampaignReadyCellNode: ASCellNode {
 
   var contentWidth: CGFloat {
     var contentWidth = width
-    if let config = delegate?.config {
-      contentWidth = width - 2 * config.wall.post.horizontalPadding
+    if let config = delegate?.campaignConfig {
+      contentWidth = width - 2 * config.campaign.readySection.horizontalPadding
     }
     return contentWidth
   }
@@ -81,9 +81,10 @@ public class CampaignReadyCellNode: ASCellNode {
       var y: CGFloat = padding
 
       if let divider = divider {
+        let dividerWidth = width - 2 * sectionConfig.divider.horizontalPadding
         divider.frame = CGRect(
           x: config.wall.post.horizontalPadding, y: y,
-          width: contentWidth,
+          width: dividerWidth,
           height: sectionConfig.divider.height)
         y += padding
       }
@@ -91,8 +92,8 @@ public class CampaignReadyCellNode: ASCellNode {
       if let textNode = textNode {
         let size = textNode.calculatedSize
         textNode.frame = CGRect(
-          x: 0, y: y,
-          width: width, height: size.height)
+          x: sectionConfig.horizontalPadding, y: y,
+          width: contentWidth, height: size.height)
       }
     }
   }
