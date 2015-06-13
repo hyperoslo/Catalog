@@ -8,7 +8,16 @@ public class CampaignReadyCellNode: ASCellNode {
   public var delegate: CampaignCellNodeDelegate?
   public let config: Config?
 
+  var divider: ASDisplayNode?
   var textNode: ASTextNode?
+
+  var contentWidth: CGFloat {
+    var contentWidth = width
+    if let config = delegate?.config {
+      contentWidth = width - 2 * config.wall.post.horizontalPadding
+    }
+    return contentWidth
+  }
 
   // MARK: - Initialization
 
@@ -21,6 +30,12 @@ public class CampaignReadyCellNode: ASCellNode {
 
     if let config = config {
       let sectionConfig = config.campaign.readySection
+
+      if sectionConfig.divider.enabled {
+        divider = ASDisplayNode()
+        divider!.backgroundColor = sectionConfig.divider.backgroundColor
+        addSubnode(divider)
+      }
 
       if let text = post.text {
         textNode = ASTextNode()
@@ -39,14 +54,19 @@ public class CampaignReadyCellNode: ASCellNode {
 
     if let config = config {
       let sectionConfig = config.campaign.readySection
+      let padding = sectionConfig.verticalPadding
 
-      height = sectionConfig.verticalPadding
+      height = padding * 2
+
+      if let divider = divider {
+        height += sectionConfig.divider.height + padding
+      }
 
       if let textNode = textNode {
         let size = textNode.measure(CGSize(
           width: width,
           height: CGFloat(FLT_MAX)))
-        height += size.height + sectionConfig.verticalPadding
+        height += size.height + padding
       }
     }
 
@@ -59,6 +79,14 @@ public class CampaignReadyCellNode: ASCellNode {
 
       let padding = sectionConfig.verticalPadding
       var y: CGFloat = padding
+
+      if let divider = divider {
+        divider.frame = CGRect(
+          x: config.wall.post.horizontalPadding, y: y,
+          width: contentWidth,
+          height: sectionConfig.divider.height)
+        y += padding
+      }
 
       if let textNode = textNode {
         let size = textNode.calculatedSize

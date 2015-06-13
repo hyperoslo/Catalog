@@ -55,6 +55,7 @@ public class Config: Wall.Config {
     public struct ReadySection {
       public var verticalPadding: CGFloat = 10
       public var text = Text()
+      public var divider = Divider()
 
       public struct Text {
         public var infoText = NSLocalizedString("ReadyInfo", comment: "")
@@ -67,6 +68,12 @@ public class Config: Wall.Config {
             return style
             }()
         ]
+      }
+
+      public struct Divider {
+        public var enabled = true
+        public var height: CGFloat = 1
+        public var backgroundColor = UIColor.lightGrayColor()
       }
     }
   }
