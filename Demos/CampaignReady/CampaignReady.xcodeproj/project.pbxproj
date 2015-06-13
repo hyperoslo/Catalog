@@ -13,6 +13,7 @@
 		D5A5B1371B2AF69400F73D3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A5B1351B2AF69400F73D3D /* LaunchScreen.xib */; };
 		D5A93FC0E09E329DD1ACC7D2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1ECD079FD6C60EE3A79D3E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D5D988621B2C23AF00F7B5CD /* ContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D988611B2C23AF00F7B5CD /* ContentGenerator.swift */; };
+		D5D988651B2C3CF100F7B5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5D988671B2C3CF100F7B5CD /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		D5A5B1331B2AF69400F73D3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D5A5B1361B2AF69400F73D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D5D988611B2C23AF00F7B5CD /* ContentGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentGenerator.swift; sourceTree = "<group>"; };
+		D5D988661B2C3CF100F7B5CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D5D988681B2C3CF400F7B5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				D5A5B12B1B2AF69400F73D3D /* Info.plist */,
+				D5D988671B2C3CF100F7B5CD /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5A5B1371B2AF69400F73D3D /* LaunchScreen.xib in Resources */,
+				D5D988651B2C3CF100F7B5CD /* Localizable.strings in Resources */,
 				D5A5B1341B2AF69400F73D3D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +236,15 @@
 				D5A5B1361B2AF69400F73D3D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D5D988671B2C3CF100F7B5CD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5D988661B2C3CF100F7B5CD /* Base */,
+				D5D988681B2C3CF400F7B5CD /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

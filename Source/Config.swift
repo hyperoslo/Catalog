@@ -41,7 +41,7 @@ public class Config: Wall.Config {
 
       public struct Text {
         public var textAttributes = [
-          NSFontAttributeName: UIFont.systemFontOfSize(14),
+          NSFontAttributeName: UIFont.italicSystemFontOfSize(14),
           NSForegroundColorAttributeName: UIColor.grayColor(),
           NSParagraphStyleAttributeName: {
             var style = NSMutableParagraphStyle()
