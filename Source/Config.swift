@@ -41,6 +41,8 @@ public class Config: Wall.Config {
       }
 
       public struct Text {
+        public var icon = Icon()
+
         public var textAttributes = [
           NSFontAttributeName: UIFont.italicSystemFontOfSize(14),
           NSForegroundColorAttributeName: UIColor.grayColor(),
@@ -50,6 +52,14 @@ public class Config: Wall.Config {
             return style
             }()
         ]
+
+        public struct Icon {
+          public var enabled = true
+          public var padding: CGFloat = 10
+          public var size = CGSize(width: 18, height: 18)
+          public var placeholderColor = UIColor.lightGrayColor()
+          public var image: UIImage?
+        }
       }
 
       public struct Divider {
