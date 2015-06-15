@@ -23,7 +23,7 @@ public class Config: Wall.Config {
     public var readySection = ReadySection()
 
     public struct Info {
-      public var verticalPadding: CGFloat = 10
+      public var verticalPadding: CGFloat = 20
       public var title = Title()
       public var text = Text()
       public var divider = Divider()
@@ -62,7 +62,7 @@ public class Config: Wall.Config {
 
     public struct ReadySection {
       public var horizontalPadding: CGFloat = 40
-      public var verticalPadding: CGFloat = 10
+      public var verticalPadding: CGFloat = 20
       public var text = Text()
       public var divider = Divider()
 
