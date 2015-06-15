@@ -26,6 +26,7 @@ public class Config: Wall.Config {
       public var verticalPadding: CGFloat = 10
       public var title = Title()
       public var text = Text()
+      public var divider = Divider()
 
       public struct Title {
         public var textAttributes = [
@@ -49,6 +50,13 @@ public class Config: Wall.Config {
             return style
             }()
         ]
+      }
+
+      public struct Divider {
+        public var horizontalPadding: CGFloat = 10
+        public var enabled = true
+        public var height: CGFloat = 1
+        public var backgroundColor = UIColor.lightGrayColor()
       }
     }
 
