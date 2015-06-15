@@ -9,6 +9,7 @@ public class CampaignInfoCellNode: ASCellNode {
   public var config: Config?
 
   var titleNode: ASTextNode?
+  var iconNode: ASImageNode?
   var textNode: ASTextNode?
   var divider: ASDisplayNode?
 
@@ -30,6 +31,14 @@ public class CampaignInfoCellNode: ASCellNode {
           string: title,
           attributes: infoConfig.title.textAttributes)
         addSubnode(titleNode)
+      }
+
+      if infoConfig.text.icon.enabled {
+        iconNode = ASImageNode()
+        iconNode!.backgroundColor = infoConfig.text.icon.placeholderColor
+        iconNode!.image = infoConfig.text.icon.image
+
+        addSubnode(iconNode)
       }
 
       if let text = post.text {
@@ -64,11 +73,10 @@ public class CampaignInfoCellNode: ASCellNode {
         height += size.height + infoConfig.verticalPadding
       }
 
-      if let textNode = textNode {
-        let size = textNode.measure(CGSize(
-          width: width,
-          height: CGFloat(FLT_MAX)))
-        height += size.height + infoConfig.verticalPadding
+      var rowHeight = textRowHeight()
+
+      if rowHeight > 0 {
+        height += rowHeight + infoConfig.verticalPadding
       }
 
       if let divider = divider {
@@ -94,12 +102,35 @@ public class CampaignInfoCellNode: ASCellNode {
         y += size.height + padding
       }
 
-      if let textNode = textNode {
-        let size = textNode.calculatedSize
-        textNode.frame = CGRect(
-          x: 0, y: y,
-          width: width, height: size.height)
-        y += size.height + padding
+      let rowHeight = textRowHeight()
+      if rowHeight > 0 {
+        if let textNode = textNode {
+          let size = textNode.calculatedSize
+          var rowX = (width - size.width) / CGFloat(2)
+
+          if let iconNode = iconNode {
+            let iconWidth = infoConfig.text.icon.padding
+              + infoConfig.text.icon.size.width
+            rowX -= iconWidth / CGFloat(2)
+
+            let size = infoConfig.text.icon.size
+            iconNode.frame = CGRect(
+              x: rowX,
+              y: y + (rowHeight - size.height) / CGFloat(2),
+              width: size.width,
+              height: size.height)
+
+            rowX += iconWidth
+          }
+
+          textNode.frame = CGRect(
+            x: rowX,
+            y: y + (rowHeight - size.height) / CGFloat(2),
+            width: size.width,
+            height: size.height)
+
+          y += rowHeight + padding
+        }
       }
 
       if let divider = divider {
@@ -110,5 +141,30 @@ public class CampaignInfoCellNode: ASCellNode {
           height: infoConfig.divider.height)
       }
     }
+  }
+
+  // MARK: - Private methods
+
+  private func textRowHeight() -> CGFloat {
+    var rowHeight: CGFloat = 0
+
+    if let config = config {
+      let infoConfig = config.campaign.info
+
+      if let textNode = textNode {
+        let size = textNode.measure(CGSize(
+          width: width,
+          height: CGFloat(FLT_MAX)))
+        rowHeight = size.height
+      }
+
+      if let iconNode = iconNode {
+        if infoConfig.text.icon.size.height > rowHeight {
+          rowHeight = infoConfig.text.icon.size.height
+        }
+      }
+    }
+
+    return rowHeight
   }
 }
