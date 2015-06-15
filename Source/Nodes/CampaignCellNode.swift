@@ -33,6 +33,11 @@ public class CampaignCellNode: PostCellNode {
           statusIconConfig.image
           : statusIconConfig.selectedImage
 
+        if statusIconConfig.rounded {
+          statusNode?.cornerRadius = statusIconConfig.size.width / 2
+          statusNode?.clipsToBounds = true
+        }
+
         addSubnode(statusNode)
       }
     }
