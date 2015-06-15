@@ -33,10 +33,10 @@ CHECKOUT OPTIONS:
     :commit: b24d4ed16d1c47976e76d64d450af60c468a9544
     :git: https://github.com/vadymmarkov/Faker
   TimeAgo:
-    :commit: e80dfdfd2b80663c26565d41d1ec5739a944693d
+    :commit: b252d0cb4bc72a3b93c7dce197b72f79fbb263d8
     :git: https://github.com/hyperoslo/TimeAgo
   Wall:
-    :commit: d8e98d91a6857842ca8e565a5602432346b055aa
+    :commit: 64d2ea23692f60fe2642370e4cd5570fbb33e2c6
     :git: https://github.com/hyperoslo/Wall
 
 SPEC CHECKSUMS:
@@ -46,7 +46,7 @@ SPEC CHECKSUMS:
   Nimble: 23f1dbddf1706172c7d740430858e5dfa93d997a
   Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
-  TimeAgo: e82c5171b70a4ad868fc30bf13090e4fe036808d
-  Wall: 18d79fd91eddf056dd19c43e5b45b7f671231d06
+  TimeAgo: 2722d6b1b9f69ade2472dd06e444cc6d6f38874a
+  Wall: 098034ecd27eb4b8532c0920489caef0d644751d
 
 COCOAPODS: 0.37.2
