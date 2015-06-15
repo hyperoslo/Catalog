@@ -44,7 +44,7 @@ public class Config: Wall.Config {
         public var icon = Icon()
 
         public var textAttributes = [
-          NSFontAttributeName: UIFont.italicSystemFontOfSize(14),
+          NSFontAttributeName: UIFont.systemFontOfSize(16),
           NSForegroundColorAttributeName: UIColor.grayColor(),
           NSParagraphStyleAttributeName: {
             var style = NSMutableParagraphStyle()
