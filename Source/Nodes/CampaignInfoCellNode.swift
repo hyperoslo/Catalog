@@ -10,6 +10,7 @@ public class CampaignInfoCellNode: ASCellNode {
 
   var titleNode: ASTextNode?
   var textNode: ASTextNode?
+  var divider: ASDisplayNode?
 
   // MARK: - Initialization
 
@@ -38,6 +39,12 @@ public class CampaignInfoCellNode: ASCellNode {
           attributes: infoConfig.text.textAttributes)
         addSubnode(textNode)
       }
+
+      if infoConfig.divider.enabled {
+        divider = ASDisplayNode()
+        divider!.backgroundColor = infoConfig.divider.backgroundColor
+        addSubnode(divider)
+      }
     }
   }
 
@@ -62,6 +69,10 @@ public class CampaignInfoCellNode: ASCellNode {
           width: width,
           height: CGFloat(FLT_MAX)))
         height += size.height + infoConfig.verticalPadding
+      }
+
+      if let divider = divider {
+        height += infoConfig.divider.height + infoConfig.verticalPadding
       }
     }
 
@@ -88,6 +99,15 @@ public class CampaignInfoCellNode: ASCellNode {
         textNode.frame = CGRect(
           x: 0, y: y,
           width: width, height: size.height)
+        y += size.height + padding
+      }
+
+      if let divider = divider {
+        let dividerWidth = width - 2 * infoConfig.divider.horizontalPadding
+        divider.frame = CGRect(
+          x: infoConfig.divider.horizontalPadding, y: y,
+          width: dividerWidth,
+          height: infoConfig.divider.height)
       }
     }
   }
