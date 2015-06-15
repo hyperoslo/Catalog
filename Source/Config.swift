@@ -96,5 +96,18 @@ public class Config: Wall.Config {
         public var backgroundColor = UIColor.lightGrayColor()
       }
     }
+
+    public struct Content {
+
+      public struct StatusIcon {
+        public var enabled = true
+        public var horizontalPadding: CGFloat = 10
+        public var verticalPadding: CGFloat = 40
+        public var size = CGSize(width: 24, height: 24)
+        public var placeholderColor = UIColor.lightGrayColor()
+        public var image: UIImage?
+        public var imageCompleted: UIImage?
+      }
+    }
   }
 }

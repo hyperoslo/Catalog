@@ -12,7 +12,6 @@
 		D5353B4B1B2986B700576E0B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4A1B2986B700576E0B /* Config.swift */; };
 		D5353B4D1B298C8D00576E0B /* CampaignDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4C1B298C8D00576E0B /* CampaignDataSource.swift */; };
 		D5353B4F1B298D4B00576E0B /* CampaignCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4E1B298D4B00576E0B /* CampaignCellNode.swift */; };
-		D56F124E1B2F10460064B64D /* AttachmentGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56F124D1B2F10460064B64D /* AttachmentGridNode.swift */; };
 		D5A5B1161B2A653000F73D3D /* CampaignReadyCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B1151B2A653000F73D3D /* CampaignReadyCellNode.swift */; };
 		D5A5B1191B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B1181B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift */; };
 		D5A5B11B1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B11A1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift */; };
@@ -42,7 +41,6 @@
 		D5353B4A1B2986B700576E0B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D5353B4C1B298C8D00576E0B /* CampaignDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignDataSource.swift; sourceTree = "<group>"; };
 		D5353B4E1B298D4B00576E0B /* CampaignCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignCellNode.swift; sourceTree = "<group>"; };
-		D56F124D1B2F10460064B64D /* AttachmentGridNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentGridNode.swift; sourceTree = "<group>"; };
 		D5A5B1151B2A653000F73D3D /* CampaignReadyCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignReadyCellNode.swift; sourceTree = "<group>"; };
 		D5A5B1181B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignInfoCellNodeSpec.swift; sourceTree = "<group>"; };
 		D5A5B11A1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignReadyCellNodeSpec.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				D5A5B1151B2A653000F73D3D /* CampaignReadyCellNode.swift */,
 				D5353B4E1B298D4B00576E0B /* CampaignCellNode.swift */,
 				D5A5B11C1B2AEA3900F73D3D /* CampaignCellNodeDelegate.swift */,
-				D56F124D1B2F10460064B64D /* AttachmentGridNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 				D5F924461B284D8C00BAF081 /* Campaign.swift in Sources */,
 				D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */,
 				D5A5B1191B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift in Sources */,
-				D56F124E1B2F10460064B64D /* AttachmentGridNode.swift in Sources */,
 				D5F9244D1B28671200BAF081 /* Product.swift in Sources */,
 				D5F924431B284C5400BAF081 /* CampaignController.swift in Sources */,
 				D5F924531B287A8300BAF081 /* ProductSectionSpec.swift in Sources */,
