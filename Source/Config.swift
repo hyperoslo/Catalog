@@ -56,7 +56,7 @@ public class Config: Wall.Config {
         public struct Icon {
           public var enabled = true
           public var padding: CGFloat = 10
-          public var size = CGSize(width: 18, height: 18)
+          public var size = CGSize(width: 24, height: 24)
           public var placeholderColor = UIColor.lightGrayColor()
           public var image: UIImage?
         }
