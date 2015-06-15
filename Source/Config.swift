@@ -103,8 +103,8 @@ public class Config: Wall.Config {
 
       public struct StatusIcon {
         public var enabled = true
-        public var horizontalPadding: CGFloat = 10
-        public var verticalPadding: CGFloat = 40
+        public var horizontalPadding: CGFloat = 40
+        public var verticalPadding: CGFloat = 60
         public var size = CGSize(width: 24, height: 24)
         public var backgroundColor = UIColor.redColor()
         public var selectedBackgroundColor = UIColor.greenColor()
