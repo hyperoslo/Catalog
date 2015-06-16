@@ -14,8 +14,12 @@ public class Campaign: NSObject {
   public var contentSections = [Post]()
   public var productSections: [Post] = [ProductSection]()
 
-  public init(title: String, publishDate: NSDate, startDate: NSDate,
-    endDate: NSDate, status: Status = Status.Open,
+  public init(
+    title: String? = nil,
+    publishDate: NSDate? = nil,
+    startDate: NSDate? = nil,
+    endDate: NSDate? = nil,
+    status: Status? = nil,
     contentSections: [Post] = [],
     productSections: [ProductSection] = []) {
       self.title = title
