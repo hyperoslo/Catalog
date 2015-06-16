@@ -2,7 +2,7 @@ import Wall
 
 public class Product: NSObject {
 
-  public var title: String
+  public var title: String?
   public var attachments: [Attachment]?
   public var serialNumber: String?
   public var text: String?

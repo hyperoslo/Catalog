@@ -6,11 +6,11 @@ public class Campaign: NSObject {
     case Open, Completed, Expired
   }
 
-  public var title: String
-  public var publishDate: NSDate
-  public var startDate: NSDate
-  public var endDate: NSDate
-  public var status: Status
+  public var title: String?
+  public var publishDate: NSDate?
+  public var startDate: NSDate?
+  public var endDate: NSDate?
+  public var status: Status?
   public var contentSections = [Post]()
   public var productSections: [Post] = [ProductSection]()
 
