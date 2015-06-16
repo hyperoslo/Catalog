@@ -83,7 +83,7 @@ public class CampaignReadyCellNode: ASCellNode {
       if let divider = divider {
         let dividerWidth = width - 2 * sectionConfig.divider.horizontalPadding
         divider.frame = CGRect(
-          x: config.wall.post.horizontalPadding, y: y,
+          x: sectionConfig.divider.horizontalPadding, y: y,
           width: dividerWidth,
           height: sectionConfig.divider.height)
         y += padding

@@ -23,9 +23,10 @@ public class Config: Wall.Config {
     public var readySection = ReadySection()
 
     public struct Info {
-      public var verticalPadding: CGFloat = 10
+      public var verticalPadding: CGFloat = 20
       public var title = Title()
       public var text = Text()
+      public var divider = Divider()
 
       public struct Title {
         public var textAttributes = [
@@ -40,8 +41,10 @@ public class Config: Wall.Config {
       }
 
       public struct Text {
+        public var icon = Icon()
+
         public var textAttributes = [
-          NSFontAttributeName: UIFont.italicSystemFontOfSize(14),
+          NSFontAttributeName: UIFont.systemFontOfSize(16),
           NSForegroundColorAttributeName: UIColor.grayColor(),
           NSParagraphStyleAttributeName: {
             var style = NSMutableParagraphStyle()
@@ -49,12 +52,27 @@ public class Config: Wall.Config {
             return style
             }()
         ]
+
+        public struct Icon {
+          public var enabled = true
+          public var padding: CGFloat = 10
+          public var size = CGSize(width: 24, height: 24)
+          public var placeholderColor = UIColor.lightGrayColor()
+          public var image: UIImage?
+        }
+      }
+
+      public struct Divider {
+        public var horizontalPadding: CGFloat = 10
+        public var enabled = true
+        public var height: CGFloat = 1
+        public var backgroundColor = UIColor.lightGrayColor()
       }
     }
 
     public struct ReadySection {
       public var horizontalPadding: CGFloat = 40
-      public var verticalPadding: CGFloat = 10
+      public var verticalPadding: CGFloat = 20
       public var text = Text()
       public var divider = Divider()
 
