@@ -54,6 +54,10 @@ struct ContentGenerator {
 
     section.title = title
 
+    if index % 2 == 0 {
+      section.read = true
+    }
+
     return section
   }
 

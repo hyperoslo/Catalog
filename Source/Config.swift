@@ -21,6 +21,7 @@ public class Config: Wall.Config {
 
     public var info = Info()
     public var readySection = ReadySection()
+    public var content = Content()
 
     public struct Info {
       public var verticalPadding: CGFloat = 20
@@ -94,6 +95,22 @@ public class Config: Wall.Config {
         public var enabled = true
         public var height: CGFloat = 1
         public var backgroundColor = UIColor.lightGrayColor()
+      }
+    }
+
+    public struct Content {
+      public var statusIcon = StatusIcon()
+
+      public struct StatusIcon {
+        public var enabled = true
+        public var rounded = false
+        public var horizontalPadding: CGFloat = 40
+        public var verticalPadding: CGFloat = 60
+        public var size = CGSize(width: 24, height: 24)
+        public var backgroundColor = UIColor.redColor()
+        public var selectedBackgroundColor = UIColor.greenColor()
+        public var image: UIImage?
+        public var selectedImage: UIImage?
       }
     }
   }

@@ -18,7 +18,7 @@ extension CampaignDataSource: ASCollectionViewDataSource {
     } else if indexPath.row == data.count - 1 {
       cellNode = CampaignReadyCellNode(post: post, width: width, delegate)
     } else {
-      cellNode = PostCellNode(post: post, width: width, delegate)
+      cellNode = CampaignCellNode(post: post, width: width, delegate)
     }
 
     return cellNode

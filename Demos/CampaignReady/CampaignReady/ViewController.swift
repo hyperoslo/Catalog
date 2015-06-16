@@ -16,7 +16,8 @@ class ViewController: CampaignController {
       return String(format: attachment.thumbnail.string, Int(size.width), Int(size.height))
     }
     config.wall.post.title.textAttributes[NSFontAttributeName] = UIFont.boldSystemFontOfSize(18)
-
+    campaignConfig.campaign.content.statusIcon.rounded = true
+    
     campaign = generator.campaign()
     reloadPosts()
   }
