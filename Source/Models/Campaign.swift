@@ -6,16 +6,20 @@ public class Campaign: NSObject {
     case Open, Completed, Expired
   }
 
-  public var title: String
-  public var publishDate: NSDate
-  public var startDate: NSDate
-  public var endDate: NSDate
-  public var status: Status
+  public var title: String?
+  public var publishDate: NSDate?
+  public var startDate: NSDate?
+  public var endDate: NSDate?
+  public var status: Status?
   public var contentSections = [Post]()
   public var productSections: [Post] = [ProductSection]()
 
-  public init(title: String, publishDate: NSDate, startDate: NSDate,
-    endDate: NSDate, status: Status = Status.Open,
+  public init(
+    title: String? = nil,
+    publishDate: NSDate? = nil,
+    startDate: NSDate? = nil,
+    endDate: NSDate? = nil,
+    status: Status? = nil,
     contentSections: [Post] = [],
     productSections: [ProductSection] = []) {
       self.title = title

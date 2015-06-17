@@ -2,7 +2,7 @@ import Wall
 
 public class Product: NSObject {
 
-  public var title: String
+  public var title: String?
   public var attachments: [Attachment]?
   public var serialNumber: String?
   public var text: String?
@@ -11,9 +11,13 @@ public class Product: NSObject {
   public var discount: String?
   public var parent: Post?
 
-  public init(title: String, serialNumber: String? = nil,
-    attachments: [Attachment]? = nil, price: Double? = nil,
-    oldPrice: Double? = nil, discount: String? = nil) {
+  public init(
+    title: String? = nil,
+    serialNumber: String? = nil,
+    attachments: [Attachment]? = nil,
+    price: Double? = nil,
+    oldPrice: Double? = nil,
+    discount: String? = nil) {
       self.title = title
       self.serialNumber = serialNumber
       self.attachments = attachments

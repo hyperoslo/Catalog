@@ -48,7 +48,7 @@ class CampaignSpec: QuickSpec {
           }
 
           it("sets default values") {
-            expect(campaign.status).to(equal(Campaign.Status.Open))
+            expect(campaign.status).to(beNil())
           }
         }
 

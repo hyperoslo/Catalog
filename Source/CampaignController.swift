@@ -9,10 +9,15 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
   public var infoPost: Post? {
     var post: Post?
     if let campaign = campaign {
-      let dateFormatter = campaignConfig.campaign.dateFormatter
-      let startDateString = dateFormatter.stringFromDate(campaign.startDate)
-      let endDateString = dateFormatter.stringFromDate(campaign.endDate)
-      let infoText = "\(startDateString) - \(endDateString)"
+      var infoText: String?
+
+      if let startDate = campaign.startDate, endDate = campaign.endDate {
+        let dateFormatter = campaignConfig.campaign.dateFormatter
+
+        let startDateString = dateFormatter.stringFromDate(startDate)
+        let endDateString = dateFormatter.stringFromDate(endDate)
+        infoText = "\(startDateString) - \(endDateString)"
+      }
 
       post = Post(text: infoText, date: campaign.publishDate)
       post!.title = campaign.title
