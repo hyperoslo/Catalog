@@ -8,20 +8,24 @@ public class CatalogController: WallController, CategoryCellNodeDelegate {
 
   public var headerPost: Post? {
     var post: Post?
-    if let category = category {
-      var string = catalogConfig.catalog.footer.text.string
-      post = Post(text: string, date: category.publishDate)
-      post!.title = category.title
+    if catalogConfig.catalog.header.enabled {
+      if let category = category {
+        var string = catalogConfig.catalog.footer.text.string
+        post = Post(text: string, date: category.publishDate)
+        post!.title = category.title
+      }
     }
     return post
   }
 
   public var footerPost: Post? {
     var post: Post?
-    if let category = category {
-      post = Post(
-        text: catalogConfig.catalog.footer.text.string,
-        date: category.publishDate)
+    if catalogConfig.catalog.footer.enabled {
+      if let category = category {
+        post = Post(
+          text: catalogConfig.catalog.footer.text.string,
+          date: category.publishDate)
+      }
     }
     return post
   }
