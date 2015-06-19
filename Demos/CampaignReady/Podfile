@@ -5,4 +5,4 @@ use_frameworks!
 pod 'Wall', git: 'https://github.com/hyperoslo/Wall'
 pod 'Faker', git: 'https://github.com/vadymmarkov/Faker'
 
-pod 'Campaign', path: '../../'
+pod 'Catalog', path: '../../'

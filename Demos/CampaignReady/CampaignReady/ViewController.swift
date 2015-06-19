@@ -1,8 +1,8 @@
 import UIKit
 import Wall
-import Campaign
+import Catalog
 
-class ViewController: CampaignController {
+class ViewController: CatalogController {
 
   let generator = ContentGenerator()
 
@@ -12,13 +12,14 @@ class ViewController: CampaignController {
     title = "Campaign Ready"
 
     config.wall.thumbnailForAttachment = {
-      (attachment: Attachment, size: CGSize) -> URLStringConvertible in
-      return String(format: attachment.thumbnail.string, Int(size.width), Int(size.height))
+      (attachment: Attachment, size: CGSize) -> URLStringConvertible? in
+      return String(format: attachment.thumbnail!.string,
+        Int(size.width), Int(size.height))
     }
     config.wall.post.title.textAttributes[NSFontAttributeName] = UIFont.boldSystemFontOfSize(18)
-    campaignConfig.campaign.content.statusIcon.rounded = true
-    
-    campaign = generator.campaign()
+    catalogConfig.catalog.contentSection.statusIcon.rounded = true
+
+    listing = generator.listing()
     reloadPosts()
   }
 }
