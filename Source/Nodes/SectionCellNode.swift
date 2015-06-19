@@ -2,7 +2,7 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignCellNode: PostCellNode {
+public class SectionCellNode: PostCellNode {
 
   var statusNode: ASImageNode?
 
@@ -23,7 +23,7 @@ public class CampaignCellNode: PostCellNode {
     let delegate = delegate as? CategoryCellNodeDelegate
 
     if let config = catalogConfig {
-      let statusIconConfig = config.campaign.content.statusIcon
+      let statusIconConfig = config.catalog.contentSection.statusIcon
       if statusIconConfig.enabled {
         statusNode = ASImageNode()
         statusNode?.backgroundColor = post.read
@@ -49,7 +49,7 @@ public class CampaignCellNode: PostCellNode {
     super.layout()
 
     if let config = catalogConfig {
-      let statusIconConfig = config.campaign.content.statusIcon
+      let statusIconConfig = config.catalog.contentSection.statusIcon
 
       if let statusNode = statusNode {
         let size = statusIconConfig.size

@@ -24,6 +24,7 @@ public class Config: Wall.Config {
     public var contentSection = ContentSection()
 
     public struct Header {
+      public var enabled = true
       public var verticalPadding: CGFloat = 20
       public var title = Title()
       public var text = Text()
@@ -64,14 +65,15 @@ public class Config: Wall.Config {
       }
 
       public struct Divider {
-        public var horizontalPadding: CGFloat = 10
         public var enabled = true
+        public var horizontalPadding: CGFloat = 10
         public var height: CGFloat = 1
         public var backgroundColor = UIColor.lightGrayColor()
       }
     }
 
     public struct Footer {
+      public var enabled = true
       public var horizontalPadding: CGFloat = 40
       public var verticalPadding: CGFloat = 20
       public var text = Text()

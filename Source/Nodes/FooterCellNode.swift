@@ -14,7 +14,7 @@ public class FooterCellNode: ASCellNode {
   var contentWidth: CGFloat {
     var contentWidth = width
     if let config = delegate?.catalogConfig {
-      contentWidth = width - 2 * config.campaign.readySection.horizontalPadding
+      contentWidth = width - 2 * config.catalog.footer.horizontalPadding
     }
     return contentWidth
   }
@@ -29,7 +29,7 @@ public class FooterCellNode: ASCellNode {
     super.init()
 
     if let config = config {
-      let sectionConfig = config.campaign.readySection
+      let sectionConfig = config.catalog.footer
 
       if sectionConfig.divider.enabled {
         divider = ASDisplayNode()
@@ -53,7 +53,7 @@ public class FooterCellNode: ASCellNode {
     var height: CGFloat = 0
 
     if let config = config {
-      let sectionConfig = config.campaign.readySection
+      let sectionConfig = config.catalog.footer
       let padding = sectionConfig.verticalPadding
 
       height = padding * 2
@@ -75,7 +75,7 @@ public class FooterCellNode: ASCellNode {
 
   override public func layout() {
     if let config = config {
-      let sectionConfig = config.campaign.readySection
+      let sectionConfig = config.catalog.footer
 
       let padding = sectionConfig.verticalPadding
       var y: CGFloat = padding

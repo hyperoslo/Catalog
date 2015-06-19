@@ -23,7 +23,7 @@ public class HeaderCellNode: ASCellNode {
     super.init()
 
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
 
       if let title = post.title {
         titleNode = ASTextNode()
@@ -63,7 +63,7 @@ public class HeaderCellNode: ASCellNode {
     var height: CGFloat = 0
 
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
       height = infoConfig.verticalPadding
 
       if let titleNode = titleNode {
@@ -89,7 +89,7 @@ public class HeaderCellNode: ASCellNode {
 
   override public func layout() {
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
 
       let padding = infoConfig.verticalPadding
       var y: CGFloat = padding
@@ -149,7 +149,7 @@ public class HeaderCellNode: ASCellNode {
     var rowHeight: CGFloat = 0
 
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
 
       if let textNode = textNode {
         let size = textNode.measure(CGSize(

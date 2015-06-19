@@ -6,30 +6,21 @@ public class CatalogController: WallController, CategoryCellNodeDelegate {
   public var category: Category?
   public var catalogConfig = Config()
 
-  public var infoPost: Post? {
+  public var headerPost: Post? {
     var post: Post?
     if let category = category {
-      var infoText: String?
-
-      if let startDate = category.startDate, endDate = category.endDate {
-        let dateFormatter = catalogConfig.campaign.dateFormatter
-
-        let startDateString = dateFormatter.stringFromDate(startDate)
-        let endDateString = dateFormatter.stringFromDate(endDate)
-        infoText = "\(startDateString) - \(endDateString)"
-      }
-
-      post = Post(text: infoText, date: category.publishDate)
+      var string = catalogConfig.catalog.footer.text.string
+      post = Post(text: string, date: category.publishDate)
       post!.title = category.title
     }
     return post
   }
 
-  public var readySectionPost: Post? {
+  public var footerPost: Post? {
     var post: Post?
     if let category = category {
       post = Post(
-        text: catalogConfig.campaign.readySection.text.infoText,
+        text: catalogConfig.catalog.footer.text.string,
         date: category.publishDate)
     }
     return post
@@ -44,7 +35,7 @@ public class CatalogController: WallController, CategoryCellNodeDelegate {
     super.viewDidLoad()
 
     config = catalogConfig
-    dataSource = CatalogDataSource(delegate: self)
+    dataSource = CatalogDataSource(delegate: self, config: catalogConfig)
     collectionView.asyncDataSource = dataSource
 
     config.wall.post.header.enabled = false
@@ -60,13 +51,13 @@ public class CatalogController: WallController, CategoryCellNodeDelegate {
     var posts = [Post]()
 
     if let category = category {
-      if let infoPost = infoPost {
-        posts.append(infoPost)
+      if let headerPost = headerPost {
+        posts.append(headerPost)
       }
       posts += category.contentSections
       posts += category.cardSections
-      if let readySectionPost = readySectionPost {
-        posts.append(readySectionPost)
+      if let footerPost = footerPost {
+        posts.append(footerPost)
       }
     }
 
