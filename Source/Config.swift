@@ -4,7 +4,7 @@ import Wall
 
 public class Config: Wall.Config {
 
-  public var campaign = Catalog()
+  public var catalog = Catalog()
 
   public override init() {
     super.init()
@@ -19,11 +19,11 @@ public class Config: Wall.Config {
 
     public var padding: CGFloat = 0
 
-    public var info = Info()
-    public var readySection = ReadySection()
-    public var content = Content()
+    public var header = Header()
+    public var footer = Footer()
+    public var contentSection = ContentSection()
 
-    public struct Info {
+    public struct Header {
       public var verticalPadding: CGFloat = 20
       public var title = Title()
       public var text = Text()
@@ -42,8 +42,8 @@ public class Config: Wall.Config {
       }
 
       public struct Text {
+        public var string = ""
         public var icon = Icon()
-
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(16),
           NSForegroundColorAttributeName: UIColor.grayColor(),
@@ -71,14 +71,14 @@ public class Config: Wall.Config {
       }
     }
 
-    public struct ReadySection {
+    public struct Footer {
       public var horizontalPadding: CGFloat = 40
       public var verticalPadding: CGFloat = 20
       public var text = Text()
       public var divider = Divider()
 
       public struct Text {
-        public var infoText = NSLocalizedString("ReadyInfo", comment: "")
+        public var string = ""
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(14),
           NSForegroundColorAttributeName: UIColor.grayColor(),
@@ -98,7 +98,7 @@ public class Config: Wall.Config {
       }
     }
 
-    public struct Content {
+    public struct ContentSection {
       public var statusIcon = StatusIcon()
 
       public struct StatusIcon {
