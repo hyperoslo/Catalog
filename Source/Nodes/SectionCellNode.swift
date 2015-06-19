@@ -6,10 +6,10 @@ public class CampaignCellNode: PostCellNode {
 
   var statusNode: ASImageNode?
 
-  var campaignConfig: Config? {
+  var catalogConfig: Config? {
     var config: Config?
-    if let delegate = delegate as? CampaignCellNodeDelegate {
-      config = delegate.campaignConfig
+    if let delegate = delegate as? CategoryCellNodeDelegate {
+      config = delegate.catalogConfig
     }
 
     return config
@@ -20,9 +20,9 @@ public class CampaignCellNode: PostCellNode {
   public override init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     super.init(post: post, width: width, delegate)
 
-    let delegate = delegate as? CampaignCellNodeDelegate
+    let delegate = delegate as? CategoryCellNodeDelegate
 
-    if let config = campaignConfig {
+    if let config = catalogConfig {
       let statusIconConfig = config.campaign.content.statusIcon
       if statusIconConfig.enabled {
         statusNode = ASImageNode()
@@ -48,7 +48,7 @@ public class CampaignCellNode: PostCellNode {
   public override func layout() {
     super.layout()
 
-    if let config = campaignConfig {
+    if let config = catalogConfig {
       let statusIconConfig = config.campaign.content.statusIcon
 
       if let statusNode = statusNode {

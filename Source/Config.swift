@@ -4,13 +4,13 @@ import Wall
 
 public class Config: Wall.Config {
 
-  public var campaign = Campaign()
+  public var campaign = Catalog()
 
   public override init() {
     super.init()
   }
 
-  public struct Campaign {
+  public struct Catalog {
     public var dateFormatter: NSDateFormatter = {
       let dateFormatter = NSDateFormatter()
       dateFormatter.dateFormat = "dd.MM.yy"

@@ -2,10 +2,10 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignInfoCellNode: ASCellNode {
+public class HeaderCellNode: ASCellNode {
 
   public let width: CGFloat
-  public var delegate: CampaignCellNodeDelegate?
+  public var delegate: CategoryCellNodeDelegate?
   public var config: Config?
 
   var titleNode: ASTextNode?
@@ -17,8 +17,8 @@ public class CampaignInfoCellNode: ASCellNode {
 
   public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate as? CampaignCellNodeDelegate
-    self.config = self.delegate?.campaignConfig
+    self.delegate = delegate as? CategoryCellNodeDelegate
+    self.config = self.delegate?.catalogConfig
 
     super.init()
 

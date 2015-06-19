@@ -2,10 +2,10 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignReadyCellNode: ASCellNode {
+public class FooterCellNode: ASCellNode {
 
   public let width: CGFloat
-  public var delegate: CampaignCellNodeDelegate?
+  public var delegate: CategoryCellNodeDelegate?
   public let config: Config?
 
   var divider: ASDisplayNode?
@@ -13,7 +13,7 @@ public class CampaignReadyCellNode: ASCellNode {
 
   var contentWidth: CGFloat {
     var contentWidth = width
-    if let config = delegate?.campaignConfig {
+    if let config = delegate?.catalogConfig {
       contentWidth = width - 2 * config.campaign.readySection.horizontalPadding
     }
     return contentWidth
@@ -23,8 +23,8 @@ public class CampaignReadyCellNode: ASCellNode {
 
   public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate as? CampaignCellNodeDelegate
-    self.config = self.delegate?.campaignConfig
+    self.delegate = delegate as? CategoryCellNodeDelegate
+    self.config = self.delegate?.catalogConfig
 
     super.init()
 

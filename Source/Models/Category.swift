@@ -1,6 +1,6 @@
 import Wall
 
-public class Campaign: NSObject {
+public class Category: NSObject {
 
   public enum Status {
     case Open, Completed, Expired
@@ -11,8 +11,8 @@ public class Campaign: NSObject {
   public var startDate: NSDate?
   public var endDate: NSDate?
   public var status: Status?
-  public var contentSections = [Post]()
-  public var productSections: [Post] = [ProductSection]()
+  public var contentSections: [Post] = [ContentSection]()
+  public var cardSections: [Post] = [CardSection]()
 
   public init(
     title: String? = nil,
@@ -20,14 +20,14 @@ public class Campaign: NSObject {
     startDate: NSDate? = nil,
     endDate: NSDate? = nil,
     status: Status? = nil,
-    contentSections: [Post] = [],
-    productSections: [ProductSection] = []) {
+    contentSections: [ContentSection] = [],
+    cardSections: [CardSection] = []) {
       self.title = title
       self.publishDate = publishDate
       self.startDate = startDate
       self.endDate = endDate
       self.status = status
       self.contentSections = contentSections
-      self.productSections = productSections
+      self.cardSections = cardSections
   }
 }

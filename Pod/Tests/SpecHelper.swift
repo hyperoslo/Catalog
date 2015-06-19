@@ -3,7 +3,7 @@ import Wall
 
 struct SpecHelper {
 
-  static var campaign: Campaign {
+  static var category: Category {
     let faker = Faker()
 
     let title = faker.lorem.word()
@@ -18,7 +18,7 @@ struct SpecHelper {
     return campaign
   }
 
-  static var product: Product {
+  static var item: Item {
     let faker = Faker()
 
     let title = faker.lorem.word()
@@ -29,7 +29,7 @@ struct SpecHelper {
     let oldPrice = 1005.2
     let discount = "5%"
 
-    let product = Product(title: title, serialNumber: serialNumber, attachments: attachments, price: price, oldPrice: oldPrice, discount: discount)
+    let item = Item(title: title, serialNumber: serialNumber, attachments: attachments, price: price, oldPrice: oldPrice, discount: discount)
 
     return product
   }

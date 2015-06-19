@@ -1,11 +1,11 @@
 import Wall
 import AsyncDisplayKit
 
-public class CampaignDataSource: WallDataSource {}
+public class CatalogDataSource: WallDataSource {}
 
 // MARK: - ASCollectionViewDataSource
 
-extension CampaignDataSource: ASCollectionViewDataSource {
+extension CatalogDataSource: ASCollectionViewDataSource {
 
   public override func collectionView(collectionView: ASCollectionView!, nodeForItemAtIndexPath indexPath: NSIndexPath!) -> ASCellNode! {
     let cellNode: ASCellNode
@@ -14,9 +14,9 @@ extension CampaignDataSource: ASCollectionViewDataSource {
     let width = collectionView.frame.width
 
     if indexPath.row == 0 {
-      cellNode = CampaignInfoCellNode(post: post, width: width, delegate)
+      cellNode = HeaderCellNode(post: post, width: width, delegate)
     } else if indexPath.row == data.count - 1 {
-      cellNode = CampaignReadyCellNode(post: post, width: width, delegate)
+      cellNode = FooterCellNode(post: post, width: width, delegate)
     } else {
       cellNode = CampaignCellNode(post: post, width: width, delegate)
     }

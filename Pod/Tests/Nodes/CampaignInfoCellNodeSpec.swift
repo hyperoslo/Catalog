@@ -10,7 +10,7 @@ class CampaignInfoCellNodeSpec: QuickSpec {
       let faker = Faker()
 
       let controller = CampaignController()
-      let config = controller.campaignConfig.campaign
+      let config = controller.catalogConfig.campaign
       
       let campaign = SpecHelper.campaign
       let post = Post(

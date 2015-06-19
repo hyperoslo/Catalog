@@ -1,50 +1,50 @@
 import UIKit
 import Wall
 
-public class CampaignController: WallController, CampaignCellNodeDelegate {
+public class CatalogController: WallController, CategoryCellNodeDelegate {
 
-  public var campaign: Campaign?
-  public var campaignConfig = Config()
+  public var category: Category?
+  public var catalogConfig = Config()
 
   public var infoPost: Post? {
     var post: Post?
-    if let campaign = campaign {
+    if let category = category {
       var infoText: String?
 
-      if let startDate = campaign.startDate, endDate = campaign.endDate {
-        let dateFormatter = campaignConfig.campaign.dateFormatter
+      if let startDate = category.startDate, endDate = category.endDate {
+        let dateFormatter = catalogConfig.campaign.dateFormatter
 
         let startDateString = dateFormatter.stringFromDate(startDate)
         let endDateString = dateFormatter.stringFromDate(endDate)
         infoText = "\(startDateString) - \(endDateString)"
       }
 
-      post = Post(text: infoText, date: campaign.publishDate)
-      post!.title = campaign.title
+      post = Post(text: infoText, date: category.publishDate)
+      post!.title = category.title
     }
     return post
   }
 
   public var readySectionPost: Post? {
     var post: Post?
-    if let campaign = campaign {
+    if let category = category {
       post = Post(
-        text: campaignConfig.campaign.readySection.text.infoText,
-        date: campaign.publishDate)
+        text: catalogConfig.campaign.readySection.text.infoText,
+        date: category.publishDate)
     }
     return post
   }
 
-  public convenience init(campaign: Campaign) {
+  public convenience init(category: Category) {
     self.init()
-    self.campaign = campaign
+    self.category = category
   }
 
   public override func viewDidLoad() {
     super.viewDidLoad()
 
-    config = campaignConfig
-    dataSource = CampaignDataSource(delegate: self)
+    config = catalogConfig
+    dataSource = CatalogDataSource(delegate: self)
     collectionView.asyncDataSource = dataSource
 
     config.wall.post.header.enabled = false
@@ -59,12 +59,12 @@ public class CampaignController: WallController, CampaignCellNodeDelegate {
   public func reloadPosts() {
     var posts = [Post]()
 
-    if let campaign = campaign {
+    if let category = category {
       if let infoPost = infoPost {
         posts.append(infoPost)
       }
-      posts += campaign.contentSections
-      posts += campaign.productSections
+      posts += category.contentSections
+      posts += category.cardSections
       if let readySectionPost = readySectionPost {
         posts.append(readySectionPost)
       }
