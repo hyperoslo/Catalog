@@ -12,10 +12,10 @@ class HeaderCellNodeSpec: QuickSpec {
       let controller = CatalogController()
       let config = controller.catalogConfig.catalog
 
-      let category = SpecHelper.category
+      let listing = SpecHelper.listing
       let post = Post(
         text: faker.lorem.sentences(amount: 2),
-        date: category.publishDate)
+        date: listing.publishDate)
       post.title = faker.lorem.word()
       let width: CGFloat = 320
 

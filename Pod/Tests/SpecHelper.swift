@@ -3,19 +3,19 @@ import Wall
 
 struct SpecHelper {
 
-  static var category: Category {
+  static var listing: Listing {
     let faker = Faker()
 
     let title = faker.lorem.word()
     let publishDate = NSDate()
     let startDate = NSDate()
     let endDate = NSDate()
-    let status = Category.Status.Open
+    let status = Listing.Status.Open
 
-    let category = Category(title: title, publishDate: publishDate,
+    let listing = Listing(title: title, publishDate: publishDate,
         startDate: startDate, endDate: endDate, status: status)
 
-    return category
+    return listing
   }
 
   static var item: Item {

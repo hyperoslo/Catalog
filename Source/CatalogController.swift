@@ -1,18 +1,18 @@
 import UIKit
 import Wall
 
-public class CatalogController: WallController, CategoryCellNodeDelegate {
+public class CatalogController: WallController, ListingCellNodeDelegate {
 
-  public var category: Category?
+  public var listing: Listing?
   public var catalogConfig = Config()
 
   public var headerPost: Post? {
     var post: Post?
     if catalogConfig.catalog.header.enabled {
-      if let category = category {
+      if let listing = listing {
         var string = catalogConfig.catalog.footer.text.string
-        post = Post(text: string, date: category.publishDate)
-        post!.title = category.title
+        post = Post(text: string, date: listing.publishDate)
+        post!.title = listing.title
       }
     }
     return post
@@ -21,18 +21,18 @@ public class CatalogController: WallController, CategoryCellNodeDelegate {
   public var footerPost: Post? {
     var post: Post?
     if catalogConfig.catalog.footer.enabled {
-      if let category = category {
+      if let listing = listing {
         post = Post(
           text: catalogConfig.catalog.footer.text.string,
-          date: category.publishDate)
+          date: listing.publishDate)
       }
     }
     return post
   }
 
-  public convenience init(category: Category) {
+  public convenience init(listing: Listing) {
     self.init()
-    self.category = category
+    self.listing = listing
   }
 
   public override func viewDidLoad() {
@@ -54,12 +54,12 @@ public class CatalogController: WallController, CategoryCellNodeDelegate {
   public func reloadPosts() {
     var posts = [Post]()
 
-    if let category = category {
+    if let listing = listing {
       if let headerPost = headerPost {
         posts.append(headerPost)
       }
-      posts += category.contentSections
-      posts += category.cardSections
+      posts += listing.contentSections
+      posts += listing.cardSections
       if let footerPost = footerPost {
         posts.append(footerPost)
       }

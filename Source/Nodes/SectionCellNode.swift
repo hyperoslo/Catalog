@@ -8,7 +8,7 @@ public class SectionCellNode: PostCellNode {
 
   var catalogConfig: Config? {
     var config: Config?
-    if let delegate = delegate as? CategoryCellNodeDelegate {
+    if let delegate = delegate as? ListingCellNodeDelegate {
       config = delegate.catalogConfig
     }
 
@@ -20,7 +20,7 @@ public class SectionCellNode: PostCellNode {
   public override init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     super.init(post: post, width: width, delegate)
 
-    let delegate = delegate as? CategoryCellNodeDelegate
+    let delegate = delegate as? ListingCellNodeDelegate
 
     if let config = catalogConfig {
       let statusIconConfig = config.catalog.contentSection.statusIcon

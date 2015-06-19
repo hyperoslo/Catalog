@@ -5,7 +5,7 @@ import Wall
 public class HeaderCellNode: ASCellNode {
 
   public let width: CGFloat
-  public var delegate: CategoryCellNodeDelegate?
+  public var delegate: ListingCellNodeDelegate?
   public var config: Config?
 
   var titleNode: ASTextNode?
@@ -17,7 +17,7 @@ public class HeaderCellNode: ASCellNode {
 
   public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate as? CategoryCellNodeDelegate
+    self.delegate = delegate as? ListingCellNodeDelegate
     self.config = self.delegate?.catalogConfig
 
     super.init()

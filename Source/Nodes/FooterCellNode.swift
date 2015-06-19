@@ -5,7 +5,7 @@ import Wall
 public class FooterCellNode: ASCellNode {
 
   public let width: CGFloat
-  public var delegate: CategoryCellNodeDelegate?
+  public var delegate: ListingCellNodeDelegate?
   public let config: Config?
 
   var divider: ASDisplayNode?
@@ -23,7 +23,7 @@ public class FooterCellNode: ASCellNode {
 
   public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate as? CategoryCellNodeDelegate
+    self.delegate = delegate as? ListingCellNodeDelegate
     self.config = self.delegate?.catalogConfig
 
     super.init()

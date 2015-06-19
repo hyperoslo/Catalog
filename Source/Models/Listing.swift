@@ -1,6 +1,6 @@
 import Wall
 
-public class Category: NSObject {
+public class Listing: NSObject {
 
   public enum Status {
     case Open, Completed, Expired

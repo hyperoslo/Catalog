@@ -1,5 +1,5 @@
 import Wall
 
-public protocol CategoryCellNodeDelegate: PostCellNodeDelegate {
+public protocol ListingCellNodeDelegate: PostCellNodeDelegate {
   var catalogConfig: Config { get }
 }
