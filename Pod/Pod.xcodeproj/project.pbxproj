@@ -14,18 +14,18 @@
 		D5353B4D1B298C8D00576E0B /* CatalogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4C1B298C8D00576E0B /* CatalogDataSource.swift */; };
 		D5353B4F1B298D4B00576E0B /* SectionCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5353B4E1B298D4B00576E0B /* SectionCellNode.swift */; };
 		D5A5B1161B2A653000F73D3D /* FooterCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B1151B2A653000F73D3D /* FooterCellNode.swift */; };
-		D5A5B1191B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B1181B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift */; };
-		D5A5B11B1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B11A1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift */; };
+		D5A5B1191B2AD48B00F73D3D /* HeaderCellNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B1181B2AD48B00F73D3D /* HeaderCellNodeSpec.swift */; };
+		D5A5B11B1B2AD96B00F73D3D /* FooterCellNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B11A1B2AD96B00F73D3D /* FooterCellNodeSpec.swift */; };
 		D5A5B11D1B2AEA3900F73D3D /* CategoryCellNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5B11C1B2AEA3900F73D3D /* CategoryCellNodeDelegate.swift */; };
 		D5F924431B284C5400BAF081 /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924421B284C5400BAF081 /* CatalogController.swift */; };
 		D5F924461B284D8C00BAF081 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924451B284D8C00BAF081 /* Category.swift */; };
-		D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924481B28563000BAF081 /* CampaignSpec.swift */; };
+		D5F924491B28563000BAF081 /* CategorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924481B28563000BAF081 /* CategorySpec.swift */; };
 		D5F9244B1B28635900BAF081 /* CardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9244A1B28635900BAF081 /* CardSection.swift */; };
 		D5F9244D1B28671200BAF081 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9244C1B28671200BAF081 /* Item.swift */; };
-		D5F9244F1B28714D00BAF081 /* ProductSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9244E1B28714D00BAF081 /* ProductSpec.swift */; };
+		D5F9244F1B28714D00BAF081 /* ItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9244E1B28714D00BAF081 /* ItemSpec.swift */; };
 		D5F924511B28777F00BAF081 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924501B28777F00BAF081 /* Card.swift */; };
-		D5F924531B287A8300BAF081 /* ProductSectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924521B287A8300BAF081 /* ProductSectionSpec.swift */; };
-		D5F924551B287C4A00BAF081 /* ProductCardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924541B287C4A00BAF081 /* ProductCardSpec.swift */; };
+		D5F924531B287A8300BAF081 /* CardSectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924521B287A8300BAF081 /* CardSectionSpec.swift */; };
+		D5F924551B287C4A00BAF081 /* CardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924541B287C4A00BAF081 /* CardSpec.swift */; };
 		D5F924571B287CC500BAF081 /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F924561B287CC500BAF081 /* SpecHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,18 +44,18 @@
 		D5353B4C1B298C8D00576E0B /* CatalogDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogDataSource.swift; sourceTree = "<group>"; };
 		D5353B4E1B298D4B00576E0B /* SectionCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionCellNode.swift; sourceTree = "<group>"; };
 		D5A5B1151B2A653000F73D3D /* FooterCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterCellNode.swift; sourceTree = "<group>"; };
-		D5A5B1181B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignInfoCellNodeSpec.swift; sourceTree = "<group>"; };
-		D5A5B11A1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignReadyCellNodeSpec.swift; sourceTree = "<group>"; };
+		D5A5B1181B2AD48B00F73D3D /* HeaderCellNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellNodeSpec.swift; sourceTree = "<group>"; };
+		D5A5B11A1B2AD96B00F73D3D /* FooterCellNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterCellNodeSpec.swift; sourceTree = "<group>"; };
 		D5A5B11C1B2AEA3900F73D3D /* CategoryCellNodeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellNodeDelegate.swift; sourceTree = "<group>"; };
 		D5F924421B284C5400BAF081 /* CatalogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogController.swift; sourceTree = "<group>"; };
 		D5F924451B284D8C00BAF081 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		D5F924481B28563000BAF081 /* CampaignSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignSpec.swift; sourceTree = "<group>"; };
+		D5F924481B28563000BAF081 /* CategorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySpec.swift; sourceTree = "<group>"; };
 		D5F9244A1B28635900BAF081 /* CardSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSection.swift; sourceTree = "<group>"; };
 		D5F9244C1B28671200BAF081 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		D5F9244E1B28714D00BAF081 /* ProductSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSpec.swift; sourceTree = "<group>"; };
+		D5F9244E1B28714D00BAF081 /* ItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSpec.swift; sourceTree = "<group>"; };
 		D5F924501B28777F00BAF081 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		D5F924521B287A8300BAF081 /* ProductSectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSectionSpec.swift; sourceTree = "<group>"; };
-		D5F924541B287C4A00BAF081 /* ProductCardSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCardSpec.swift; sourceTree = "<group>"; };
+		D5F924521B287A8300BAF081 /* CardSectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSectionSpec.swift; sourceTree = "<group>"; };
+		D5F924541B287C4A00BAF081 /* CardSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSpec.swift; sourceTree = "<group>"; };
 		D5F924561B287CC500BAF081 /* SpecHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecHelper.swift; sourceTree = "<group>"; };
 		EE6995D8BC8E90B338BAD99F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,8 +151,8 @@
 		D5A5B1171B2AD45E00F73D3D /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				D5A5B1181B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift */,
-				D5A5B11A1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift */,
+				D5A5B1181B2AD48B00F73D3D /* HeaderCellNodeSpec.swift */,
+				D5A5B11A1B2AD96B00F73D3D /* FooterCellNodeSpec.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -172,10 +172,10 @@
 		D5F924471B28562400BAF081 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D5F924481B28563000BAF081 /* CampaignSpec.swift */,
-				D5F9244E1B28714D00BAF081 /* ProductSpec.swift */,
-				D5F924521B287A8300BAF081 /* ProductSectionSpec.swift */,
-				D5F924541B287C4A00BAF081 /* ProductCardSpec.swift */,
+				D5F924481B28563000BAF081 /* CategorySpec.swift */,
+				D5F9244E1B28714D00BAF081 /* ItemSpec.swift */,
+				D5F924521B287A8300BAF081 /* CardSectionSpec.swift */,
+				D5F924541B287C4A00BAF081 /* CardSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,20 +316,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F924461B284D8C00BAF081 /* Category.swift in Sources */,
-				D5F924491B28563000BAF081 /* CampaignSpec.swift in Sources */,
-				D5A5B1191B2AD48B00F73D3D /* CampaignInfoCellNodeSpec.swift in Sources */,
+				D5F924491B28563000BAF081 /* CategorySpec.swift in Sources */,
+				D5A5B1191B2AD48B00F73D3D /* HeaderCellNodeSpec.swift in Sources */,
 				D5F9244D1B28671200BAF081 /* Item.swift in Sources */,
 				D5F924431B284C5400BAF081 /* CatalogController.swift in Sources */,
-				D5F924531B287A8300BAF081 /* ProductSectionSpec.swift in Sources */,
+				D5F924531B287A8300BAF081 /* CardSectionSpec.swift in Sources */,
 				D507E7D11B3456E700638101 /* ContentSection.swift in Sources */,
 				D5353B4B1B2986B700576E0B /* Config.swift in Sources */,
 				D5353B4D1B298C8D00576E0B /* CatalogDataSource.swift in Sources */,
-				D5F9244F1B28714D00BAF081 /* ProductSpec.swift in Sources */,
+				D5F9244F1B28714D00BAF081 /* ItemSpec.swift in Sources */,
 				D5F9244B1B28635900BAF081 /* CardSection.swift in Sources */,
 				D5A5B11D1B2AEA3900F73D3D /* CategoryCellNodeDelegate.swift in Sources */,
-				D5A5B11B1B2AD96B00F73D3D /* CampaignReadyCellNodeSpec.swift in Sources */,
+				D5A5B11B1B2AD96B00F73D3D /* FooterCellNodeSpec.swift in Sources */,
 				D5353B4F1B298D4B00576E0B /* SectionCellNode.swift in Sources */,
-				D5F924551B287C4A00BAF081 /* ProductCardSpec.swift in Sources */,
+				D5F924551B287C4A00BAF081 /* CardSpec.swift in Sources */,
 				D5A5B1161B2A653000F73D3D /* FooterCellNode.swift in Sources */,
 				D5353B491B29837200576E0B /* HeaderCellNode.swift in Sources */,
 				D5F924571B287CC500BAF081 /* SpecHelper.swift in Sources */,

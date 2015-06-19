@@ -10,12 +10,12 @@ struct SpecHelper {
     let publishDate = NSDate()
     let startDate = NSDate()
     let endDate = NSDate()
-    let status = Campaign.Status.Open
+    let status = Category.Status.Open
 
-    let campaign = Campaign(title: title, publishDate: publishDate,
+    let category = Category(title: title, publishDate: publishDate,
         startDate: startDate, endDate: endDate, status: status)
 
-    return campaign
+    return category
   }
 
   static var item: Item {
@@ -31,6 +31,6 @@ struct SpecHelper {
 
     let item = Item(title: title, serialNumber: serialNumber, attachments: attachments, price: price, oldPrice: oldPrice, discount: discount)
 
-    return product
+    return item
   }
 }

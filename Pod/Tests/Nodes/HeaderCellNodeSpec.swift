@@ -3,33 +3,33 @@ import Nimble
 import Faker
 import Wall
 
-class CampaignInfoCellNodeSpec: QuickSpec {
+class HeaderCellNodeSpec: QuickSpec {
 
   override func spec() {
-    describe("CampaignInfoCellNode") {
+    describe("HeaderCellNode") {
       let faker = Faker()
 
-      let controller = CampaignController()
-      let config = controller.catalogConfig.campaign
-      
-      let campaign = SpecHelper.campaign
+      let controller = CatalogController()
+      let config = controller.catalogConfig.catalog
+
+      let category = SpecHelper.category
       let post = Post(
         text: faker.lorem.sentences(amount: 2),
-        date: campaign.publishDate)
+        date: category.publishDate)
       post.title = faker.lorem.word()
       let width: CGFloat = 320
 
       let title = NSAttributedString(
         string: post.title!,
-        attributes: config.info.title.textAttributes)
+        attributes: config.header.title.textAttributes)
       let text = NSAttributedString(
         string: post.text!,
-        attributes: config.info.text.textAttributes)
+        attributes: config.header.text.textAttributes)
 
-      var node: CampaignInfoCellNode!
+      var node: HeaderCellNode!
 
       beforeEach {
-        node = CampaignInfoCellNode(post: post, width: width, controller)
+        node = HeaderCellNode(post: post, width: width, controller)
       }
 
       describe("#init") {
@@ -54,7 +54,7 @@ class CampaignInfoCellNodeSpec: QuickSpec {
         context("with no title") {
           beforeEach {
             post.title = nil
-            node = CampaignInfoCellNode(post: post, width: width, controller)
+            node = HeaderCellNode(post: post, width: width, controller)
           }
 
           it("does not add a title node") {
@@ -65,7 +65,7 @@ class CampaignInfoCellNodeSpec: QuickSpec {
         context("with no text") {
           beforeEach {
             post.text = nil
-            node = CampaignInfoCellNode(post: post, width: width, controller)
+            node = HeaderCellNode(post: post, width: width, controller)
           }
 
           it("does not add a text node") {

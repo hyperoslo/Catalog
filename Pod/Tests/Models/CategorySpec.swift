@@ -2,59 +2,59 @@ import Quick
 import Nimble
 import Faker
 
-class CampaignSpec: QuickSpec {
+class CategorySpec: QuickSpec {
 
   override func spec() {
-    describe("Campaign") {
+    describe("Category") {
       let title = Faker().lorem.word()
       let publishDate = NSDate()
       let startDate = NSDate()
       let endDate = NSDate()
-      let status = Campaign.Status.Completed
+      let status = Category.Status.Completed
 
-      var campaign: Campaign!
+      var catalog: Category!
 
       beforeEach {
-        campaign = Campaign(title: title, publishDate: publishDate,
+        catalog = Category(title: title, publishDate: publishDate,
           startDate: startDate, endDate: endDate, status: status)
       }
 
       describe("#init") {
         it("sets title") {
-          expect(campaign.title).to(equal(title))
+          expect(catalog.title).to(equal(title))
         }
 
         it("sets publish date") {
-          expect(campaign.publishDate).to(equal(publishDate))
+          expect(catalog.publishDate).to(equal(publishDate))
         }
 
         it("sets start date") {
-          expect(campaign.startDate).to(equal(startDate))
+          expect(catalog.startDate).to(equal(startDate))
         }
 
         it("sets end date") {
-          expect(campaign.endDate).to(equal(endDate))
+          expect(catalog.endDate).to(equal(endDate))
         }
 
         it("sets default values") {
-          expect(campaign.contentSections.count).to(equal(0))
-          expect(campaign.productSections.count).to(equal(0))
+          expect(catalog.contentSections.count).to(equal(0))
+          expect(catalog.cardSections.count).to(equal(0))
         }
 
         context("with required parameters") {
           beforeEach {
-            campaign = Campaign(title: title, publishDate: publishDate,
+            catalog = Category(title: title, publishDate: publishDate,
               startDate: startDate, endDate: endDate)
           }
 
           it("sets default values") {
-            expect(campaign.status).to(beNil())
+            expect(catalog.status).to(beNil())
           }
         }
 
         context("with all parameters") {
           it("sets status") {
-            expect(campaign.status).to(equal(status))
+            expect(catalog.status).to(equal(status))
           }
         }
       }
