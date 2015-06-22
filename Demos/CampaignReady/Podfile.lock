@@ -7,6 +7,7 @@ PODS:
   - Faker (0.1.0):
     - SwiftyJSON (~> 2.2.0)
   - HanekeSwift (0.9.1)
+  - SevenSwitch (2.0.0)
   - SwiftyJSON (2.2.0)
   - Wall (0.1.0):
     - AsyncDisplayKit (~> 1.2)
@@ -15,13 +16,17 @@ PODS:
 DEPENDENCIES:
   - Catalog (from `../../`)
   - Faker (from `https://github.com/vadymmarkov/Faker`)
+  - SevenSwitch (from `https://github.com/hyperoslo/SevenSwitch`, commit `c8c659912e0c2c44834bde38d0c60866c4597542`)
   - Wall (from `https://github.com/hyperoslo/Wall`)
 
 EXTERNAL SOURCES:
   Catalog:
-    :path: "../../"
+    :path: ../../
   Faker:
     :git: https://github.com/vadymmarkov/Faker
+  SevenSwitch:
+    :commit: c8c659912e0c2c44834bde38d0c60866c4597542
+    :git: https://github.com/hyperoslo/SevenSwitch
   Wall:
     :git: https://github.com/hyperoslo/Wall
 
@@ -29,6 +34,9 @@ CHECKOUT OPTIONS:
   Faker:
     :commit: b24d4ed16d1c47976e76d64d450af60c468a9544
     :git: https://github.com/vadymmarkov/Faker
+  SevenSwitch:
+    :commit: c8c659912e0c2c44834bde38d0c60866c4597542
+    :git: https://github.com/hyperoslo/SevenSwitch
   Wall:
     :commit: fd7161cf52159d0afad686ffcf56b0c7a92f3804
     :git: https://github.com/hyperoslo/Wall
@@ -38,6 +46,7 @@ SPEC CHECKSUMS:
   Catalog: 48a6f0fc11c9137024fd00fdda6eef3d7b3b9684
   Faker: ec2361307c261ae4b26c8da20b127d416faf0ebd
   HanekeSwift: 50d37bfbc4432edc649167e538c259feccb4a2bb
+  SevenSwitch: 72f8e057a6c467d89a829d92cbf31f1c9bc1461d
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
   Wall: 098034ecd27eb4b8532c0920489caef0d644751d
 
