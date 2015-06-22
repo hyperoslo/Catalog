@@ -41,6 +41,10 @@ public class CatalogController: WallController, ListingCellNodeDelegate {
     config = catalogConfig
     dataSource = CatalogDataSource(delegate: self, config: catalogConfig)
     collectionView.asyncDataSource = dataSource
+    
+    let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+    collectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footer")
+    layout.footerReferenceSize = view.bounds.size
 
     config.wall.post.header.enabled = false
     config.wall.post.footer.enabled = false
