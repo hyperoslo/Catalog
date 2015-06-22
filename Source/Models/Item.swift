@@ -1,6 +1,6 @@
 import Wall
 
-public class Product: NSObject {
+public class Item: NSObject {
 
   public var title: String?
   public var attachments: [Attachment]?
@@ -9,7 +9,6 @@ public class Product: NSObject {
   public var price: Double?
   public var oldPrice: Double?
   public var discount: String?
-  public var parent: Post?
 
   public init(
     title: String? = nil,

@@ -3,22 +3,22 @@ import Wall
 
 struct SpecHelper {
 
-  static var campaign: Campaign {
+  static var listing: Listing {
     let faker = Faker()
 
     let title = faker.lorem.word()
     let publishDate = NSDate()
     let startDate = NSDate()
     let endDate = NSDate()
-    let status = Campaign.Status.Open
+    let status = Listing.Status.Open
 
-    let campaign = Campaign(title: title, publishDate: publishDate,
+    let listing = Listing(title: title, publishDate: publishDate,
         startDate: startDate, endDate: endDate, status: status)
 
-    return campaign
+    return listing
   }
 
-  static var product: Product {
+  static var item: Item {
     let faker = Faker()
 
     let title = faker.lorem.word()
@@ -29,8 +29,8 @@ struct SpecHelper {
     let oldPrice = 1005.2
     let discount = "5%"
 
-    let product = Product(title: title, serialNumber: serialNumber, attachments: attachments, price: price, oldPrice: oldPrice, discount: discount)
+    let item = Item(title: title, serialNumber: serialNumber, attachments: attachments, price: price, oldPrice: oldPrice, discount: discount)
 
-    return product
+    return item
   }
 }

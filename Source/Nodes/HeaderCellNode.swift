@@ -2,10 +2,10 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignInfoCellNode: ASCellNode {
+public class HeaderCellNode: ASCellNode {
 
   public let width: CGFloat
-  public var delegate: CampaignCellNodeDelegate?
+  public var delegate: ListingCellNodeDelegate?
   public var config: Config?
 
   var titleNode: ASTextNode?
@@ -17,13 +17,13 @@ public class CampaignInfoCellNode: ASCellNode {
 
   public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate as? CampaignCellNodeDelegate
-    self.config = self.delegate?.campaignConfig
+    self.delegate = delegate as? ListingCellNodeDelegate
+    self.config = self.delegate?.catalogConfig
 
     super.init()
 
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
 
       if let title = post.title {
         titleNode = ASTextNode()
@@ -63,7 +63,7 @@ public class CampaignInfoCellNode: ASCellNode {
     var height: CGFloat = 0
 
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
       height = infoConfig.verticalPadding
 
       if let titleNode = titleNode {
@@ -89,7 +89,7 @@ public class CampaignInfoCellNode: ASCellNode {
 
   override public func layout() {
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
 
       let padding = infoConfig.verticalPadding
       var y: CGFloat = padding
@@ -149,7 +149,7 @@ public class CampaignInfoCellNode: ASCellNode {
     var rowHeight: CGFloat = 0
 
     if let config = config {
-      let infoConfig = config.campaign.info
+      let infoConfig = config.catalog.header
 
       if let textNode = textNode {
         let size = textNode.measure(CGSize(

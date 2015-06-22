@@ -4,13 +4,13 @@ import Wall
 
 public class Config: Wall.Config {
 
-  public var campaign = Campaign()
+  public var catalog = Catalog()
 
   public override init() {
     super.init()
   }
 
-  public struct Campaign {
+  public struct Catalog {
     public var dateFormatter: NSDateFormatter = {
       let dateFormatter = NSDateFormatter()
       dateFormatter.dateFormat = "dd.MM.yy"
@@ -19,11 +19,12 @@ public class Config: Wall.Config {
 
     public var padding: CGFloat = 0
 
-    public var info = Info()
-    public var readySection = ReadySection()
-    public var content = Content()
+    public var header = Header()
+    public var footer = Footer()
+    public var contentSection = ContentSection()
 
-    public struct Info {
+    public struct Header {
+      public var enabled = true
       public var verticalPadding: CGFloat = 20
       public var title = Title()
       public var text = Text()
@@ -42,8 +43,8 @@ public class Config: Wall.Config {
       }
 
       public struct Text {
+        public var string = ""
         public var icon = Icon()
-
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(16),
           NSForegroundColorAttributeName: UIColor.grayColor(),
@@ -64,21 +65,22 @@ public class Config: Wall.Config {
       }
 
       public struct Divider {
-        public var horizontalPadding: CGFloat = 10
         public var enabled = true
+        public var horizontalPadding: CGFloat = 10
         public var height: CGFloat = 1
         public var backgroundColor = UIColor.lightGrayColor()
       }
     }
 
-    public struct ReadySection {
+    public struct Footer {
+      public var enabled = true
       public var horizontalPadding: CGFloat = 40
       public var verticalPadding: CGFloat = 20
       public var text = Text()
       public var divider = Divider()
 
       public struct Text {
-        public var infoText = NSLocalizedString("ReadyInfo", comment: "")
+        public var string = ""
         public var textAttributes = [
           NSFontAttributeName: UIFont.systemFontOfSize(14),
           NSForegroundColorAttributeName: UIColor.grayColor(),
@@ -98,7 +100,7 @@ public class Config: Wall.Config {
       }
     }
 
-    public struct Content {
+    public struct ContentSection {
       public var statusIcon = StatusIcon()
 
       public struct StatusIcon {

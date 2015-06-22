@@ -2,10 +2,10 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignReadyCellNode: ASCellNode {
+public class FooterCellNode: ASCellNode {
 
   public let width: CGFloat
-  public var delegate: CampaignCellNodeDelegate?
+  public var delegate: ListingCellNodeDelegate?
   public let config: Config?
 
   var divider: ASDisplayNode?
@@ -13,8 +13,8 @@ public class CampaignReadyCellNode: ASCellNode {
 
   var contentWidth: CGFloat {
     var contentWidth = width
-    if let config = delegate?.campaignConfig {
-      contentWidth = width - 2 * config.campaign.readySection.horizontalPadding
+    if let config = delegate?.catalogConfig {
+      contentWidth = width - 2 * config.catalog.footer.horizontalPadding
     }
     return contentWidth
   }
@@ -23,13 +23,13 @@ public class CampaignReadyCellNode: ASCellNode {
 
   public init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     self.width = width
-    self.delegate = delegate as? CampaignCellNodeDelegate
-    self.config = self.delegate?.campaignConfig
+    self.delegate = delegate as? ListingCellNodeDelegate
+    self.config = self.delegate?.catalogConfig
 
     super.init()
 
     if let config = config {
-      let sectionConfig = config.campaign.readySection
+      let sectionConfig = config.catalog.footer
 
       if sectionConfig.divider.enabled {
         divider = ASDisplayNode()
@@ -53,7 +53,7 @@ public class CampaignReadyCellNode: ASCellNode {
     var height: CGFloat = 0
 
     if let config = config {
-      let sectionConfig = config.campaign.readySection
+      let sectionConfig = config.catalog.footer
       let padding = sectionConfig.verticalPadding
 
       height = padding * 2
@@ -75,7 +75,7 @@ public class CampaignReadyCellNode: ASCellNode {
 
   override public func layout() {
     if let config = config {
-      let sectionConfig = config.campaign.readySection
+      let sectionConfig = config.catalog.footer
 
       let padding = sectionConfig.verticalPadding
       var y: CGFloat = padding

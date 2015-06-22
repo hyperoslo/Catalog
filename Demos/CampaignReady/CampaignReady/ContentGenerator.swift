@@ -1,19 +1,19 @@
 import Wall
-import Campaign
+import Catalog
 import Faker
 
 struct ContentGenerator {
 
   let faker = Faker()
 
-  func campaign() -> Campaign {
+  func listing() -> Listing {
     let title = faker.commerce.productName()
     let publishDate = NSDate()
     let startDate = NSDate()
     let endDate = NSDate()
-    let status = Campaign.Status.Open
+    let status = Listing.Status.Open
 
-    let campaign = Campaign(
+    let listing = Listing(
       title: title,
       publishDate: publishDate,
       startDate: startDate,
@@ -24,8 +24,8 @@ struct ContentGenerator {
     let contentSectionCount = 2
     let productSectionCount = 1
 
-    var contentSections = [Post]()
-    var productSections = [ProductSection]()
+    var contentSections = [ContentSection]()
+    var productSections = [CardSection]()
 
     for _ in 0..<contentSectionCount {
       contentSections.append(contentSection(index))
@@ -37,18 +37,18 @@ struct ContentGenerator {
       index++
     }
 
-    campaign.contentSections = contentSections
-    campaign.productSections = productSections
+    listing.contentSections = contentSections
+    listing.cardSections = productSections
 
-    return campaign
+    return listing
   }
 
-  func contentSection(index: Int) -> Post {
+  func contentSection(index: Int) -> ContentSection {
     let title = faker.commerce.productName()
     let publishDate = NSDate()
     let attachments = images(index)
 
-    let section = Post(
+    let section = ContentSection(
       date: publishDate,
       attachments: attachments)
 
@@ -61,47 +61,47 @@ struct ContentGenerator {
     return section
   }
 
-  func productSection(inout index: Int) -> ProductSection {
+  func productSection(inout index: Int) -> CardSection {
     let title = faker.commerce.productName()
     let publishDate = NSDate()
     let attachments = images(index)
 
-    let section = ProductSection(
+    let section = CardSection(
       date: publishDate,
       attachments: attachments)
 
     section.title = title
 
     let count = 5
-    var productCards = [ProductCard]()
+    var productCards = [Card]()
 
     for _ in 0..<count {
       productCards.append(productCard(&index))
       index++
     }
 
-    section.productCards = productCards
+    section.cards = productCards
 
     return section
   }
 
-  func productCard(inout index: Int) -> ProductCard {
+  func productCard(inout index: Int) -> Card {
     let count = 4
-    var relatedProducts = [Product]()
+    var relatedProducts = [Item]()
 
     for _ in 0..<count {
       relatedProducts.append(product(index))
       index++
     }
 
-    let productCard = ProductCard(
-      product: product(index),
-      relatedProducts: relatedProducts)
+    let productCard = Card(
+      item: product(index),
+      relatedItems: relatedProducts)
 
     return productCard
   }
 
-  func product(index: Int) -> Product {
+  func product(index: Int) -> Item {
     let title = faker.commerce.productName()
     let attachments = images(index)
     let serialNumber = faker.commerce.productName()
@@ -110,7 +110,7 @@ struct ContentGenerator {
     let oldPrice = 1005.2
     let discount = "10%"
 
-    let product = Product(
+    let product = Item(
       title: title,
       serialNumber: serialNumber,
       attachments: attachments,

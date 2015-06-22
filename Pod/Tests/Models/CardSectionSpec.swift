@@ -3,28 +3,28 @@ import Nimble
 import Faker
 import Wall
 
-class ProductSectionSpec: QuickSpec {
+class CardSectionSpec: QuickSpec {
 
   override func spec() {
-    describe("ProductSection") {
+    describe("CardSection") {
       let faker = Faker()
 
       let text = faker.lorem.word()
       let date = NSDate()
 
-      var productSection: ProductSection!
+      var cardSection: CardSection!
 
       beforeEach {
-        productSection = ProductSection(text: text, date: date)
+        cardSection = CardSection(text: text, date: date)
       }
 
       describe("#init") {
         it("is a subclass of Post") {
-          expect(productSection).to(beAKindOf(Post.self))
+          expect(cardSection).to(beAKindOf(Post.self))
         }
 
         it("sets default values") {
-          expect(productSection.productCards.count).to(equal(0))
+          expect(cardSection.cards.count).to(equal(0))
         }
       }
     }

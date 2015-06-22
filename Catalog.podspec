@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
-  s.name             = "Campaign"
+  s.name             = "Catalog"
   s.version          = "0.1.0"
-  s.summary          = "Campaign"
-  s.homepage         = "https://github.com/hyperoslo/Campaign"
+  s.summary          = "Catalog"
+  s.homepage         = "https://github.com/hyperoslo/Catalog"
   s.license          = {
     :type => 'MIT',
     :file => 'LICENSE.md'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     "Hyper Interaktiv AS" => "ios@hyper.no"
   }
   s.source           = {
-    :git => "https://github.com/hyperoslo/Campaign.git",
+    :git => "https://github.com/hyperoslo/Catalog.git",
     :tag => s.version.to_s
   }
 

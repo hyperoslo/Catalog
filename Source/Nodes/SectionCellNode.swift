@@ -2,14 +2,14 @@ import UIKit
 import AsyncDisplayKit
 import Wall
 
-public class CampaignCellNode: PostCellNode {
+public class SectionCellNode: PostCellNode {
 
   var statusNode: ASImageNode?
 
-  var campaignConfig: Config? {
+  var catalogConfig: Config? {
     var config: Config?
-    if let delegate = delegate as? CampaignCellNodeDelegate {
-      config = delegate.campaignConfig
+    if let delegate = delegate as? ListingCellNodeDelegate {
+      config = delegate.catalogConfig
     }
 
     return config
@@ -20,10 +20,10 @@ public class CampaignCellNode: PostCellNode {
   public override init(post: Post, width: CGFloat, _ delegate: AnyObject? = nil) {
     super.init(post: post, width: width, delegate)
 
-    let delegate = delegate as? CampaignCellNodeDelegate
+    let delegate = delegate as? ListingCellNodeDelegate
 
-    if let config = campaignConfig {
-      let statusIconConfig = config.campaign.content.statusIcon
+    if let config = catalogConfig {
+      let statusIconConfig = config.catalog.contentSection.statusIcon
       if statusIconConfig.enabled {
         statusNode = ASImageNode()
         statusNode?.backgroundColor = post.read
@@ -48,8 +48,8 @@ public class CampaignCellNode: PostCellNode {
   public override func layout() {
     super.layout()
 
-    if let config = campaignConfig {
-      let statusIconConfig = config.campaign.content.statusIcon
+    if let config = catalogConfig {
+      let statusIconConfig = config.catalog.contentSection.statusIcon
 
       if let statusNode = statusNode {
         let size = statusIconConfig.size
