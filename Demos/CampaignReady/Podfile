@@ -4,5 +4,6 @@ use_frameworks!
 
 pod 'Wall', git: 'https://github.com/hyperoslo/Wall'
 pod 'Faker', git: 'https://github.com/vadymmarkov/Faker'
+pod 'SevenSwitch', git: 'https://github.com/hyperoslo/SevenSwitch', :commit => 'c8c659912e0c2c44834bde38d0c60866c4597542'
 
 pod 'Catalog', path: '../../'
